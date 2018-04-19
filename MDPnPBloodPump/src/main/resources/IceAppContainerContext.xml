@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+	<bean id="propertyResolver"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="order" value="1" />
+		<property name="ignoreResourceNotFound" value="true" />
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+		<property name="locations">
+			<list>
+				<value>classpath:/ice.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- ice.properties specified via import -->
+	<import resource="classpath:RtConfig.xml" />
+
+	<!-- Utility that would work as a bridge between the worlds of headless 
+		controllers like database engines and a need for user feedback when running 
+		in interactive mode. -->
+	<bean id="controlFlowHandler"
+		class="org.mdpnp.apps.testapp.ControlFlowHandler.UIControlFlowHandler" />
+
+	<!-- for in-application event dispatching -->
+	<bean id="eventBus" class="com.google.common.eventbus.EventBus" />
+
+	<bean id="refreshScheduler" class="java.util.concurrent.Executors"
+		factory-method="newSingleThreadScheduledExecutor" destroy-method="shutdownNow">
+	</bean>
+
+	<bean id="supervisorUdi"
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="staticMethod"
+			value="org.mdpnp.devices.DeviceIdentityBuilder.randomUDI" />
+	</bean>
+
+	<!-- This is only needed when PCA apps are installed -->
+	<bean id="objectiveWriter"
+		class="org.mdpnp.rtiapi.data.InfusionObjectiveDataWriterFactory"
+		lazy-init="true">
+		<constructor-arg ref="publisher" />
+		<constructor-arg ref="domainParticipant" />
+	</bean>
+
+	<!-- This is only needed when Charting apps are installed -->
+	<bean id="patientAssessmentWriter"
+		class="org.mdpnp.rtiapi.data.PatientAssessmentDataWriterFactory"
+		lazy-init="true">
+		<constructor-arg ref="publisher" />
+		<constructor-arg ref="domainParticipant" />
+	</bean>
+
+	<!-- Do not start right away. Delegate to the LifecycleController to do 
+		it at the very end avter all beans are up so that we do not skip any DDS 
+		events -->
+	<bean id="timeManager" class="org.mdpnp.devices.TimeManager"
+		destroy-method="stop">
+		<constructor-arg ref="refreshScheduler"></constructor-arg>
+		<constructor-arg ref="eventLoop"></constructor-arg>
+		<constructor-arg ref="publisher"></constructor-arg>
+		<constructor-arg ref="subscriber"></constructor-arg>
+		<constructor-arg ref="supervisorUdi"></constructor-arg>
+		<constructor-arg type="java.lang.String">
+			<value>Supervisor</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="mdsConnectivity" class="org.mdpnp.devices.MDSHandler"
+		destroy-method="shutdown">
+		<constructor-arg ref="eventLoop" />
+		<constructor-arg ref="domainParticipant" />
+	</bean>
+
+	<bean id="fhirContext"
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="staticMethod" value="ca.uhn.fhir.context.FhirContext.forDstu2" />
+	</bean>
+
+	<!-- Create a handle to EMR system. Passing fhir url will make it talk to 
+		a real server; if not specified, will create a SQL-based implementation; 
+		if both are there will merge two sources. -->
+
+
+	<!-- Components from HIMSS'15 <bean id="himssDomainParticipant" class="org.mdpnp.devices.DomainParticipantFactory"> 
+		<constructor-arg value="${himss.domain}"/> </bean> <bean id="himssSubscriber" 
+		class="org.mdpnp.devices.SubscriberFactory"> <constructor-arg ref="himssDomainParticipant"></constructor-arg> 
+		</bean> <bean id="himssPublisher" class="org.mdpnp.devices.PublisherFactory"> 
+		<constructor-arg ref="himssDomainParticipant"></constructor-arg> </bean> 
+		<bean id="assessmentList" class="org.mdpnp.apps.fxbeans.PatientAssessmentFxListFactory" 
+		lazy-init="false"> <property name="topicName"><util:constant static-field="himss.PatientAssessmentTopic.VALUE"/></property> 
+		<property name="subscriber" ref="himssSubscriber"/> <property name="eventLoop" 
+		ref="eventLoop"/> <property name="qosLibrary"><value>ice_library</value></property> 
+		<property name="qosProfile"><value>himss</value></property> </bean> <bean 
+		id="himssEmitter" class="org.mdpnp.apps.testapp.HimssEmitter" init-method="start" 
+		destroy-method="stop"> <property name="validationOracle" ref="validationOracle"/> 
+		<property name="publisher" ref="himssPublisher"/> </bean> <bean id="himssIntaker" 
+		class="org.mdpnp.apps.testapp.HimssIntaker" init-method="start" destroy-method="stop"> 
+		<property name="subscriber" ref="himssSubscriber"/> </bean> -->
+
+	<bean id="lifecycleController" class="org.mdpnp.devices.LifecycleController">
+		<property name="startMethod" value="start" />
+		<property name="managedBeans">
+			<list>
+				<ref bean="timeManager" />
+				<ref bean="mdsConnectivity" />
+			</list>
+		</property>
+	</bean>
+
+
+</beans>

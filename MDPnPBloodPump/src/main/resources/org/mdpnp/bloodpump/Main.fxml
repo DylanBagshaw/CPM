@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mdpnp.bloodpump.Main">
+	<children>
+		<BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<bottom>
+				<HBox BorderPane.alignment="CENTER">
+					<children>
+						<Label fx:id="clock" text="clock">
+							<font>
+								<Font size="18.0" />
+							</font>
+							<padding>
+								<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+							</padding>
+						</Label>
+						<Region HBox.hgrow="ALWAYS" />
+						<Label fx:id="pumpId" alignment="CENTER_RIGHT" text="pump id">
+							<padding>
+								<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+							</padding>
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</children>
+               <BorderPane.margin>
+                  <Insets right="20.0" />
+               </BorderPane.margin>
+				</HBox>
+			</bottom>
+			<center>
+				<fx:include fx:id="dial" source="Dial.fxml" />
+				<!-- <fx:include fx:id="rotatorControl" source="RotatorControl.fxml" 
+					/> -->
+			</center>
+		</BorderPane>
+	</children>
+</AnchorPane>

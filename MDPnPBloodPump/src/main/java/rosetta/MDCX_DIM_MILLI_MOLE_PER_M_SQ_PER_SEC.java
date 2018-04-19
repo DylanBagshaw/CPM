@@ -1,0 +1,18 @@
+
+/*
+  WARNING: THIS FILE IS AUTO-GENERATED. DO NOT MODIFY.
+
+  This file was generated from .idl using "rtiddsgen".
+  The rtiddsgen tool is part of the RTI Connext distribution.
+  For more information, type 'rtiddsgen -help' at a command shell
+  or consult the RTI Connext manual.
+*/
+    
+package rosetta;
+        
+
+public class MDCX_DIM_MILLI_MOLE_PER_M_SQ_PER_SEC {    
+    
+    public static final String VALUE = "MDCX_DIM_MILLI_MOLE_PER_M_SQ_PER_SEC";
+}
+
