@@ -4984,3 +4984,604 @@ Caused by: java.io.FileNotFoundException: C:\Users\bagshawd\Documents\Eclipse-Wo
 2018-06-14 09:37:44,114 | ERROR | [D0015|DELETE Participant]DDS_DomainParticipant_destroyI:!delete builtin flow controllers | com.rti.dds | JavaFX Application Thread
 2018-06-14 09:37:44,114 | ERROR | [D0015|DELETE Participant]DDS_DomainParticipantFactory_delete_participant:!delete participant | com.rti.dds | JavaFX Application Thread
 2018-06-14 09:37:44,114 | WARN  | Invocation of destroy method failed on bean with name 'domainParticipant': com.rti.dds.infrastructure.RETCODE_ERROR | org.springframework.beans.factory.support.DisposableBeanAdapter | JavaFX Application Thread
+2018-06-14 09:47:16,892 | INFO  | Loading user overrides configuration from C:\Users\bagshawd\git\CPM\MDPnPBloodPump\ice.system.properties | org.mdpnp.bloodpump.Start | main
+2018-06-14 09:47:17,071 | INFO  | Refreshing ICE_Device_Interface: startup date [Thu Jun 14 09:47:17 EDT 2018]; root of context hierarchy | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 09:47:17,104 | INFO  | Loading XML bean definitions from class path resource [DeviceAdapterContext.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 09:47:17,208 | INFO  | Loading XML bean definitions from class path resource [RtConfig.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 09:47:17,407 | INFO  | Loading ice_library.xml from file:/C:/Users/bagshawd/git/CPM/MDPnPBloodPump/bin/META-INF/ice_library.xml | org.mdpnp.rtiapi.qos.IceQos | JavaFX Application Thread
+2018-06-14 09:47:17,418 | INFO  | Loaded default ice_library QoS from classpath | org.mdpnp.rtiapi.qos.IceQos | JavaFX Application Thread
+2018-06-14 09:47:17,462 | WARN  | Discovery 'multicast_receive_addresses' size:1 first entry:udpv4://239.255.0.1 | org.mdpnp.devices.DomainParticipantFactory | JavaFX Application Thread
+2018-06-14 09:47:17,773 | INFO  | Refreshing MD PnP Cardiopulmonary Pump: startup date [Thu Jun 14 09:47:17 EDT 2018]; parent: ICE_Device_Interface | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 09:47:17,773 | INFO  | Loading XML bean definitions from URL [file:/C:/Users/bagshawd/git/CPM/MDPnPBloodPump/bin/DriverContext.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 09:47:17,902 | INFO  | Initializing ExecutorService  'taskExecutor' | org.springframework.scheduling.concurrent.ScheduledExecutorFactoryBean | JavaFX Application Thread
+2018-06-14 09:47:17,913 | INFO  | Using the TCPSerialProvider, be sure you provided a host:port target | org.mdpnp.devices.DeviceDriverProvider$SpringLoadedDriver | JavaFX Application Thread
+2018-06-14 09:47:18,186 | INFO  | Registering beans for JMX exposure on startup | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 09:47:18,197 | INFO  | Bean with name 'driver' has been autodetected for JMX exposure | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 09:47:18,219 | INFO  | Bean with name 'partition' has been autodetected for JMX exposure | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 09:47:18,219 | INFO  | Bean with name 'timeManager' has been autodetected for JMX exposure | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 09:47:18,222 | INFO  | Located managed bean 'partition': registering with JMX server as MBean [mdpnp.driver.MD PnP Cardiopulmonary Pump116780062:service=partition] | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 09:47:18,237 | INFO  | Located managed bean 'driver': registering with JMX server as MBean [mdpnp.driver.MD PnP Cardiopulmonary Pump116780062:service=driver] | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 09:47:18,246 | INFO  | Located managed bean 'timeManager': registering with JMX server as MBean [mdpnp.driver.MD PnP Cardiopulmonary Pump116780062:service=timeManager] | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 09:47:18,247 | WARN  | Bean with key 'timeManager' has been registered as an MBean but has no exposed attributes or operations | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 09:47:18,248 | INFO  | Got ContextRefreshedEvent from MD PnP Cardiopulmonary Pump116780062 | org.mdpnp.devices.LifecycleController | JavaFX Application Thread
+2018-06-14 09:47:18,272 | INFO  | Successfully called start on 1 beans | org.mdpnp.devices.LifecycleController | JavaFX Application Thread
+2018-06-14 09:47:18,482 | INFO  | RotatorControl Connected... | org.mdpnp.util.rotator.RotatorControl | JavaFX Application Thread
+2018-06-14 09:47:18,522 | INFO  | App Started | org.mdpnp.bloodpump.Main | JavaFX Application Thread
+2018-06-14 09:47:18,523 | INFO  | Rate Connected... | org.mdpnp.bloodpump.Dial | JavaFX Application Thread
+2018-06-14 09:47:18,826 | INFO  | Connecting device to address: >192.168.56.1< | org.mdpnp.devices.DeviceDriverProvider$SpringLoadedDriver | Thread-18
+2018-06-14 09:47:31,859 | WARN  | Limit MDC_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,860 | WARN  | Limit MDC_TTHOR_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,861 | WARN  | Limit MDC_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,861 | WARN  | Limit MDC_TTHOR_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,862 | WARN  | Limit MDC_CO2_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,863 | WARN  | Limit MDC_VENT_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,863 | WARN  | Limit MDC_AWAY_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,864 | WARN  | Limit MDC_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,864 | WARN  | Limit MDC_TTHOR_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,864 | WARN  | Limit MDC_CO2_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,865 | WARN  | Limit MDC_VENT_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,865 | WARN  | Limit MDC_AWAY_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,931 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,931 | WARN  | Limit MDC_PULS_RATE_NON_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,932 | WARN  | Limit MDC_BLD_PULS_RATE_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,932 | WARN  | Limit MDC_ECG_CARD_BEAT_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,932 | WARN  | Limit MDC_ECG_HEART_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,932 | WARN  | Limit MDC_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,932 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE high_limit limit changed to [ Infinity  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,933 | WARN  | Limit MDC_PULS_RATE_NON_INV high_limit limit changed to [ Infinity  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,933 | WARN  | Limit MDC_BLD_PULS_RATE_INV high_limit limit changed to [ Infinity  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,933 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,934 | WARN  | Limit MDC_PULS_RATE_NON_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,934 | WARN  | Limit MDC_BLD_PULS_RATE_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,934 | WARN  | Limit MDC_ECG_CARD_BEAT_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,934 | WARN  | Limit MDC_ECG_HEART_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,935 | WARN  | Limit MDC_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,935 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,935 | WARN  | Limit MDC_PULS_RATE_NON_INV high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,935 | WARN  | Limit MDC_BLD_PULS_RATE_INV high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,935 | WARN  | Limit MDC_ECG_CARD_BEAT_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,936 | WARN  | Limit MDC_ECG_HEART_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,936 | WARN  | Limit MDC_PULS_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,969 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 low_limit limit changed to [ 85.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,969 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 high_limit limit changed to [ Infinity  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,969 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 low_limit limit changed to [ 85.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:31,969 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 high_limit limit changed to [ 100.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,598 | WARN  | Unsetting handle InstanceHandle_t[29,36,108,-55,109,-3,-26,-108,14,74,61,-23,-125,54,11,-112] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,598 | WARN  | Unsetting handle InstanceHandle_t[-66,60,-91,65,60,-18,-19,93,18,-66,82,122,-103,83,-115,100] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,598 | WARN  | Unsetting handle InstanceHandle_t[13,99,-94,-94,-26,53,32,89,80,-65,84,-46,-25,-89,7,44] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[76,-125,-24,-48,121,-16,82,-43,-86,-110,0,106,-2,-112,54,-123] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[-14,67,22,-127,115,56,-51,39,-120,-106,117,43,-109,71,94,-75] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[-17,-83,77,65,71,38,28,-50,-108,-89,67,-81,113,0,-51,76] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[93,-16,-61,-109,44,65,31,1,-47,-69,-90,109,-49,75,-56,-47] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[125,127,21,-44,-61,-12,22,-93,-52,13,30,95,98,76,-38,100] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[-6,-49,51,107,108,16,19,2,-78,-78,43,-92,-35,-17,-34,19] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[23,118,125,29,28,112,25,79,48,54,7,112,-55,-61,101,103] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[62,-101,-114,-2,-41,125,99,-58,12,-24,-40,-41,-90,-107,107,-94] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[2,-42,51,71,-10,-9,-56,-85,-42,88,91,-12,-119,4,25,-120] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[-20,20,69,116,69,58,-33,33,-68,47,27,33,-89,47,87,51] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[-94,20,-35,116,-34,96,36,-107,-39,93,97,66,64,-5,22,114] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[27,-103,22,-7,-86,-55,57,100,73,19,81,-74,45,119,34,-123] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[34,120,0,-23,-100,4,-108,60,46,36,-6,73,107,84,16,68] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[28,110,108,-16,79,23,121,-125,-61,22,-117,91,16,-74,126,78] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[72,4,-83,-117,21,0,-51,22,-47,124,-24,-103,57,-30,-88,-99] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[-45,28,0,-89,43,34,2,62,-73,42,-63,11,-104,-35,104,119] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[124,-108,-50,44,94,69,121,-82,114,4,126,-108,-54,4,15,1] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[-102,20,72,-47,-123,75,-43,-73,115,-72,-59,-71,10,-44,-113,115] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[-64,-126,124,-55,-127,83,-38,-9,-69,19,-26,-61,116,-20,-62,126] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[101,48,34,62,-8,84,29,106,-21,-72,20,-58,-25,-41,72,41] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:47,599 | WARN  | Unsetting handle InstanceHandle_t[-83,15,113,86,13,-17,-64,-121,25,43,21,54,48,-47,-6,109] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 09:47:50,379 | INFO  | Shutting down | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 09:47:50,379 | INFO  | Shut down local user interface | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 09:47:50,380 | INFO  | 50% Ask the device to disconnect from the ICE | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 09:47:50,381 | INFO  | 75% Shutting down the device | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 09:47:50,381 | INFO  | Closing MD PnP Cardiopulmonary Pump: startup date [Thu Jun 14 09:47:17 EDT 2018]; parent: ICE_Device_Interface | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 09:47:50,382 | INFO  | Unregistering JMX-exposed beans on shutdown | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 09:47:50,382 | INFO  | Unregistering JMX-exposed beans | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 09:47:50,384 | INFO  | Shutdown in progress... | org.mdpnp.bloodpump.BloodPumpHandler | JavaFX Application Thread
+2018-06-14 09:47:50,387 | INFO  | AbstractDevice shutdown complete | org.mdpnp.devices.AbstractDevice | JavaFX Application Thread
+2018-06-14 09:47:50,387 | INFO  | Shutdown completed. | org.mdpnp.bloodpump.BloodPumpHandler | JavaFX Application Thread
+2018-06-14 09:47:50,387 | INFO  | Shutting down ExecutorService 'taskExecutor' | org.springframework.scheduling.concurrent.ScheduledExecutorFactoryBean | JavaFX Application Thread
+2018-06-14 09:47:50,387 | INFO  | Shut down spring context | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 09:47:50,387 | INFO  | Closing ICE_Device_Interface: startup date [Thu Jun 14 09:47:17 EDT 2018]; root of context hierarchy | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 09:47:50,387 | INFO  | Handle parent context shutdown event | org.mdpnp.devices.DeviceDriverProvider$SpringLoadedDriver | JavaFX Application Thread
+2018-06-14 09:47:50,410 | ERROR | [D0015|DELETE Participant|D0015|DELETE FlowController]PRESParticipant_destroyFlowController:!delete flowController | com.rti.dds | JavaFX Application Thread
+2018-06-14 09:47:50,411 | ERROR | [D0015|DELETE Participant|D0015|DELETE FlowController]DDS_FlowController_destroyI:!delete PRESFlowController | com.rti.dds | JavaFX Application Thread
+2018-06-14 09:47:50,411 | ERROR | [D0015|DELETE Participant]DDS_DomainParticipant_deleteBuiltinFlowControllersI:!delete DDS_DEFAULT_FLOW_CONTROLLER_NAME | com.rti.dds | JavaFX Application Thread
+2018-06-14 09:47:50,411 | ERROR | [D0015|DELETE Participant]DDS_DomainParticipant_destroyI:!delete builtin flow controllers | com.rti.dds | JavaFX Application Thread
+2018-06-14 09:47:50,411 | ERROR | [D0015|DELETE Participant]DDS_DomainParticipantFactory_delete_participant:!delete participant | com.rti.dds | JavaFX Application Thread
+2018-06-14 09:47:50,411 | WARN  | Invocation of destroy method failed on bean with name 'domainParticipant': com.rti.dds.infrastructure.RETCODE_ERROR | org.springframework.beans.factory.support.DisposableBeanAdapter | JavaFX Application Thread
+2018-06-14 10:11:08,894 | INFO  | Loading user overrides configuration from C:\Users\bagshawd\git\CPM\MDPnPBloodPump\ice.system.properties | org.mdpnp.bloodpump.Start | main
+2018-06-14 10:11:09,073 | INFO  | Refreshing ICE_Device_Interface: startup date [Thu Jun 14 10:11:09 EDT 2018]; root of context hierarchy | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 10:11:09,106 | INFO  | Loading XML bean definitions from class path resource [DeviceAdapterContext.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 10:11:09,212 | INFO  | Loading XML bean definitions from class path resource [RtConfig.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 10:11:09,408 | INFO  | Loading ice_library.xml from file:/C:/Users/bagshawd/git/CPM/MDPnPBloodPump/bin/META-INF/ice_library.xml | org.mdpnp.rtiapi.qos.IceQos | JavaFX Application Thread
+2018-06-14 10:11:09,419 | INFO  | Loaded default ice_library QoS from classpath | org.mdpnp.rtiapi.qos.IceQos | JavaFX Application Thread
+2018-06-14 10:11:09,464 | WARN  | Discovery 'multicast_receive_addresses' size:1 first entry:udpv4://239.255.0.1 | org.mdpnp.devices.DomainParticipantFactory | JavaFX Application Thread
+2018-06-14 10:11:09,778 | INFO  | Refreshing MD PnP Cardiopulmonary Pump: startup date [Thu Jun 14 10:11:09 EDT 2018]; parent: ICE_Device_Interface | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 10:11:09,779 | INFO  | Loading XML bean definitions from URL [file:/C:/Users/bagshawd/git/CPM/MDPnPBloodPump/bin/DriverContext.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 10:11:09,914 | INFO  | Initializing ExecutorService  'taskExecutor' | org.springframework.scheduling.concurrent.ScheduledExecutorFactoryBean | JavaFX Application Thread
+2018-06-14 10:11:09,925 | INFO  | Using the TCPSerialProvider, be sure you provided a host:port target | org.mdpnp.devices.DeviceDriverProvider$SpringLoadedDriver | JavaFX Application Thread
+2018-06-14 10:11:10,101 | WARN  | Limit MDC_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,101 | WARN  | Limit MDC_TTHOR_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,102 | WARN  | Limit MDC_CO2_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,102 | WARN  | Limit MDC_VENT_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,103 | WARN  | Limit MDC_AWAY_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,103 | WARN  | Limit MDC_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,104 | WARN  | Limit MDC_TTHOR_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,104 | WARN  | Limit MDC_CO2_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,105 | WARN  | Limit MDC_VENT_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,105 | WARN  | Limit MDC_AWAY_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,105 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,106 | WARN  | Limit MDC_PULS_RATE_NON_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,107 | WARN  | Limit MDC_BLD_PULS_RATE_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,107 | WARN  | Limit MDC_ECG_CARD_BEAT_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,107 | WARN  | Limit MDC_ECG_HEART_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,108 | WARN  | Limit MDC_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,108 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,108 | WARN  | Limit MDC_PULS_RATE_NON_INV high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,108 | WARN  | Limit MDC_BLD_PULS_RATE_INV high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,109 | WARN  | Limit MDC_ECG_CARD_BEAT_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,109 | WARN  | Limit MDC_ECG_HEART_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,109 | WARN  | Limit MDC_PULS_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,109 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 low_limit limit changed to [ 85.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,110 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 high_limit limit changed to [ 100.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:10,229 | INFO  | Registering beans for JMX exposure on startup | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 10:11:10,247 | INFO  | Bean with name 'driver' has been autodetected for JMX exposure | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 10:11:10,273 | INFO  | Bean with name 'partition' has been autodetected for JMX exposure | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 10:11:10,274 | INFO  | Bean with name 'timeManager' has been autodetected for JMX exposure | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 10:11:10,275 | INFO  | Located managed bean 'partition': registering with JMX server as MBean [mdpnp.driver.MD PnP Cardiopulmonary Pump1338271892:service=partition] | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 10:11:10,293 | INFO  | Located managed bean 'driver': registering with JMX server as MBean [mdpnp.driver.MD PnP Cardiopulmonary Pump1338271892:service=driver] | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 10:11:10,304 | INFO  | Located managed bean 'timeManager': registering with JMX server as MBean [mdpnp.driver.MD PnP Cardiopulmonary Pump1338271892:service=timeManager] | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 10:11:10,305 | WARN  | Bean with key 'timeManager' has been registered as an MBean but has no exposed attributes or operations | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 10:11:10,307 | INFO  | Got ContextRefreshedEvent from MD PnP Cardiopulmonary Pump1338271892 | org.mdpnp.devices.LifecycleController | JavaFX Application Thread
+2018-06-14 10:11:10,317 | INFO  | Successfully called start on 1 beans | org.mdpnp.devices.LifecycleController | JavaFX Application Thread
+2018-06-14 10:11:10,517 | INFO  | RotatorControl Connected... | org.mdpnp.util.rotator.RotatorControl | JavaFX Application Thread
+2018-06-14 10:11:10,564 | INFO  | App Started | org.mdpnp.bloodpump.Main | JavaFX Application Thread
+2018-06-14 10:11:10,565 | INFO  | Rate Connected... | org.mdpnp.bloodpump.Dial | JavaFX Application Thread
+2018-06-14 10:11:10,881 | INFO  | Connecting device to address: >192.168.56.1< | org.mdpnp.devices.DeviceDriverProvider$SpringLoadedDriver | Thread-18
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[29,36,108,-55,109,-3,-26,-108,14,74,61,-23,-125,54,11,-112] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[-66,60,-91,65,60,-18,-19,93,18,-66,82,122,-103,83,-115,100] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[13,99,-94,-94,-26,53,32,89,80,-65,84,-46,-25,-89,7,44] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[76,-125,-24,-48,121,-16,82,-43,-86,-110,0,106,-2,-112,54,-123] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[-14,67,22,-127,115,56,-51,39,-120,-106,117,43,-109,71,94,-75] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[-17,-83,77,65,71,38,28,-50,-108,-89,67,-81,113,0,-51,76] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[93,-16,-61,-109,44,65,31,1,-47,-69,-90,109,-49,75,-56,-47] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[125,127,21,-44,-61,-12,22,-93,-52,13,30,95,98,76,-38,100] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[-6,-49,51,107,108,16,19,2,-78,-78,43,-92,-35,-17,-34,19] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[23,118,125,29,28,112,25,79,48,54,7,112,-55,-61,101,103] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[62,-101,-114,-2,-41,125,99,-58,12,-24,-40,-41,-90,-107,107,-94] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[2,-42,51,71,-10,-9,-56,-85,-42,88,91,-12,-119,4,25,-120] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[-20,20,69,116,69,58,-33,33,-68,47,27,33,-89,47,87,51] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[-94,20,-35,116,-34,96,36,-107,-39,93,97,66,64,-5,22,114] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[27,-103,22,-7,-86,-55,57,100,73,19,81,-74,45,119,34,-123] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[34,120,0,-23,-100,4,-108,60,46,36,-6,73,107,84,16,68] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[28,110,108,-16,79,23,121,-125,-61,22,-117,91,16,-74,126,78] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[72,4,-83,-117,21,0,-51,22,-47,124,-24,-103,57,-30,-88,-99] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[-45,28,0,-89,43,34,2,62,-73,42,-63,11,-104,-35,104,119] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,505 | WARN  | Unsetting handle InstanceHandle_t[124,-108,-50,44,94,69,121,-82,114,4,126,-108,-54,4,15,1] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,506 | WARN  | Unsetting handle InstanceHandle_t[-102,20,72,-47,-123,75,-43,-73,115,-72,-59,-71,10,-44,-113,115] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,506 | WARN  | Unsetting handle InstanceHandle_t[-64,-126,124,-55,-127,83,-38,-9,-69,19,-26,-61,116,-20,-62,126] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,506 | WARN  | Unsetting handle InstanceHandle_t[101,48,34,62,-8,84,29,106,-21,-72,20,-58,-25,-41,72,41] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:33,506 | WARN  | Unsetting handle InstanceHandle_t[-83,15,113,86,13,-17,-64,-121,25,43,21,54,48,-47,-6,109] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 10:11:35,120 | INFO  | Shutting down | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 10:11:35,120 | INFO  | Shut down local user interface | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 10:11:35,120 | INFO  | 50% Ask the device to disconnect from the ICE | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 10:11:35,122 | INFO  | 75% Shutting down the device | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 10:11:35,122 | INFO  | Closing MD PnP Cardiopulmonary Pump: startup date [Thu Jun 14 10:11:09 EDT 2018]; parent: ICE_Device_Interface | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 10:11:35,123 | INFO  | Unregistering JMX-exposed beans on shutdown | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 10:11:35,123 | INFO  | Unregistering JMX-exposed beans | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 10:11:35,125 | INFO  | Shutdown in progress... | org.mdpnp.bloodpump.BloodPumpHandler | JavaFX Application Thread
+2018-06-14 10:11:35,127 | INFO  | AbstractDevice shutdown complete | org.mdpnp.devices.AbstractDevice | JavaFX Application Thread
+2018-06-14 10:11:35,127 | INFO  | Shutdown completed. | org.mdpnp.bloodpump.BloodPumpHandler | JavaFX Application Thread
+2018-06-14 10:11:35,127 | INFO  | Shutting down ExecutorService 'taskExecutor' | org.springframework.scheduling.concurrent.ScheduledExecutorFactoryBean | JavaFX Application Thread
+2018-06-14 10:11:35,128 | INFO  | Shut down spring context | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 10:11:35,128 | INFO  | Closing ICE_Device_Interface: startup date [Thu Jun 14 10:11:09 EDT 2018]; root of context hierarchy | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 10:11:35,128 | INFO  | Handle parent context shutdown event | org.mdpnp.devices.DeviceDriverProvider$SpringLoadedDriver | JavaFX Application Thread
+2018-06-14 10:11:35,151 | ERROR | [D0215|DELETE Participant|D0215|DELETE FlowController]PRESParticipant_destroyFlowController:!delete flowController | com.rti.dds | JavaFX Application Thread
+2018-06-14 10:11:35,152 | ERROR | [D0215|DELETE Participant|D0215|DELETE FlowController]DDS_FlowController_destroyI:!delete PRESFlowController | com.rti.dds | JavaFX Application Thread
+2018-06-14 10:11:35,152 | ERROR | [D0215|DELETE Participant]DDS_DomainParticipant_deleteBuiltinFlowControllersI:!delete DDS_DEFAULT_FLOW_CONTROLLER_NAME | com.rti.dds | JavaFX Application Thread
+2018-06-14 10:11:35,152 | ERROR | [D0215|DELETE Participant]DDS_DomainParticipant_destroyI:!delete builtin flow controllers | com.rti.dds | JavaFX Application Thread
+2018-06-14 10:11:35,152 | ERROR | [D0215|DELETE Participant]DDS_DomainParticipantFactory_delete_participant:!delete participant | com.rti.dds | JavaFX Application Thread
+2018-06-14 10:11:35,152 | WARN  | Invocation of destroy method failed on bean with name 'domainParticipant': com.rti.dds.infrastructure.RETCODE_ERROR | org.springframework.beans.factory.support.DisposableBeanAdapter | JavaFX Application Thread
+2018-06-14 11:50:47,617 | INFO  | Loading user overrides configuration from C:\Users\bagshawd\git\CPM\MDPnPBloodPump\ice.system.properties | org.mdpnp.bloodpump.Start | main
+2018-06-14 11:50:47,821 | INFO  | Refreshing ICE_Device_Interface: startup date [Thu Jun 14 11:50:47 EDT 2018]; root of context hierarchy | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 11:50:47,851 | INFO  | Loading XML bean definitions from class path resource [DeviceAdapterContext.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 11:50:47,955 | INFO  | Loading XML bean definitions from class path resource [RtConfig.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 11:50:48,215 | INFO  | Loading ice_library.xml from file:/C:/Users/bagshawd/git/CPM/MDPnPBloodPump/bin/META-INF/ice_library.xml | org.mdpnp.rtiapi.qos.IceQos | JavaFX Application Thread
+2018-06-14 11:50:48,226 | INFO  | Loaded default ice_library QoS from classpath | org.mdpnp.rtiapi.qos.IceQos | JavaFX Application Thread
+2018-06-14 11:50:48,281 | WARN  | Discovery 'multicast_receive_addresses' size:1 first entry:udpv4://239.255.0.1 | org.mdpnp.devices.DomainParticipantFactory | JavaFX Application Thread
+2018-06-14 11:50:48,613 | INFO  | Refreshing MD PnP Cardiopulmonary Pump: startup date [Thu Jun 14 11:50:48 EDT 2018]; parent: ICE_Device_Interface | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 11:50:48,614 | INFO  | Loading XML bean definitions from URL [file:/C:/Users/bagshawd/git/CPM/MDPnPBloodPump/bin/DriverContext.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 11:50:48,792 | INFO  | Initializing ExecutorService  'taskExecutor' | org.springframework.scheduling.concurrent.ScheduledExecutorFactoryBean | JavaFX Application Thread
+2018-06-14 11:50:48,820 | INFO  | Using the TCPSerialProvider, be sure you provided a host:port target | org.mdpnp.devices.DeviceDriverProvider$SpringLoadedDriver | JavaFX Application Thread
+2018-06-14 11:50:49,276 | WARN  | Limit MDC_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,276 | WARN  | Limit MDC_TTHOR_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,277 | WARN  | Limit MDC_CO2_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,277 | WARN  | Limit MDC_VENT_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,277 | WARN  | Limit MDC_AWAY_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,278 | WARN  | Limit MDC_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,278 | WARN  | Limit MDC_TTHOR_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,280 | WARN  | Limit MDC_CO2_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,280 | WARN  | Limit MDC_VENT_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,281 | WARN  | Limit MDC_AWAY_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,281 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,281 | WARN  | Limit MDC_PULS_RATE_NON_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,282 | WARN  | Limit MDC_BLD_PULS_RATE_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,282 | WARN  | Limit MDC_ECG_CARD_BEAT_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,282 | WARN  | Limit MDC_ECG_HEART_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,282 | WARN  | Limit MDC_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,283 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,283 | WARN  | Limit MDC_PULS_RATE_NON_INV high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,283 | WARN  | Limit MDC_BLD_PULS_RATE_INV high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,283 | WARN  | Limit MDC_ECG_CARD_BEAT_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,284 | WARN  | Limit MDC_ECG_HEART_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,284 | WARN  | Limit MDC_PULS_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,284 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 low_limit limit changed to [ 85.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,285 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 high_limit limit changed to [ 100.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:50:49,480 | INFO  | Registering beans for JMX exposure on startup | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:50:49,489 | INFO  | Bean with name 'driver' has been autodetected for JMX exposure | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:50:49,620 | INFO  | Bean with name 'partition' has been autodetected for JMX exposure | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:50:49,621 | INFO  | Bean with name 'timeManager' has been autodetected for JMX exposure | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:50:49,622 | INFO  | Located managed bean 'partition': registering with JMX server as MBean [mdpnp.driver.MD PnP Cardiopulmonary Pump1338271892:service=partition] | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:50:49,639 | INFO  | Located managed bean 'driver': registering with JMX server as MBean [mdpnp.driver.MD PnP Cardiopulmonary Pump1338271892:service=driver] | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:50:49,650 | INFO  | Located managed bean 'timeManager': registering with JMX server as MBean [mdpnp.driver.MD PnP Cardiopulmonary Pump1338271892:service=timeManager] | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:50:49,651 | WARN  | Bean with key 'timeManager' has been registered as an MBean but has no exposed attributes or operations | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:50:49,653 | INFO  | Got ContextRefreshedEvent from MD PnP Cardiopulmonary Pump1338271892 | org.mdpnp.devices.LifecycleController | JavaFX Application Thread
+2018-06-14 11:50:49,712 | INFO  | Successfully called start on 1 beans | org.mdpnp.devices.LifecycleController | JavaFX Application Thread
+2018-06-14 11:50:49,921 | INFO  | RotatorControl Connected... | org.mdpnp.util.rotator.RotatorControl | JavaFX Application Thread
+2018-06-14 11:50:49,963 | INFO  | App Started | org.mdpnp.bloodpump.Main | JavaFX Application Thread
+2018-06-14 11:50:49,964 | INFO  | Rate Connected... | org.mdpnp.bloodpump.Dial | JavaFX Application Thread
+2018-06-14 11:50:50,303 | INFO  | Connecting device to address: >192.168.56.1< | org.mdpnp.devices.DeviceDriverProvider$SpringLoadedDriver | Thread-19
+2018-06-14 11:50:50,307 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:50,465 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:50,964 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:51,465 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:51,964 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:52,465 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:52,964 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:53,464 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:53,964 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:54,465 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:54,964 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:55,465 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:55,964 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:56,465 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:56,964 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:57,464 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:57,964 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:58,465 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:58,964 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:59,465 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:50:59,964 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:52:34,248 | INFO  | Loading user overrides configuration from C:\Users\bagshawd\git\CPM\MDPnPBloodPump\ice.system.properties | org.mdpnp.bloodpump.Start | main
+2018-06-14 11:52:34,426 | INFO  | Refreshing ICE_Device_Interface: startup date [Thu Jun 14 11:52:34 EDT 2018]; root of context hierarchy | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 11:52:34,456 | INFO  | Loading XML bean definitions from class path resource [DeviceAdapterContext.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 11:52:34,560 | INFO  | Loading XML bean definitions from class path resource [RtConfig.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 11:52:34,755 | INFO  | Loading ice_library.xml from file:/C:/Users/bagshawd/git/CPM/MDPnPBloodPump/bin/META-INF/ice_library.xml | org.mdpnp.rtiapi.qos.IceQos | JavaFX Application Thread
+2018-06-14 11:52:34,766 | INFO  | Loaded default ice_library QoS from classpath | org.mdpnp.rtiapi.qos.IceQos | JavaFX Application Thread
+2018-06-14 11:52:34,811 | WARN  | Discovery 'multicast_receive_addresses' size:1 first entry:udpv4://239.255.0.1 | org.mdpnp.devices.DomainParticipantFactory | JavaFX Application Thread
+2018-06-14 11:52:35,123 | INFO  | Refreshing MD PnP Cardiopulmonary Pump: startup date [Thu Jun 14 11:52:35 EDT 2018]; parent: ICE_Device_Interface | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 11:52:35,124 | INFO  | Loading XML bean definitions from URL [file:/C:/Users/bagshawd/git/CPM/MDPnPBloodPump/bin/DriverContext.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 11:52:35,260 | INFO  | Initializing ExecutorService  'taskExecutor' | org.springframework.scheduling.concurrent.ScheduledExecutorFactoryBean | JavaFX Application Thread
+2018-06-14 11:52:35,272 | INFO  | Using the TCPSerialProvider, be sure you provided a host:port target | org.mdpnp.devices.DeviceDriverProvider$SpringLoadedDriver | JavaFX Application Thread
+2018-06-14 11:52:35,537 | INFO  | Registering beans for JMX exposure on startup | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:52:35,548 | INFO  | Bean with name 'driver' has been autodetected for JMX exposure | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:52:35,601 | INFO  | Bean with name 'partition' has been autodetected for JMX exposure | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:52:35,603 | INFO  | Bean with name 'timeManager' has been autodetected for JMX exposure | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:52:35,605 | INFO  | Located managed bean 'partition': registering with JMX server as MBean [mdpnp.driver.MD PnP Cardiopulmonary Pump1338271892:service=partition] | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:52:35,624 | INFO  | Located managed bean 'driver': registering with JMX server as MBean [mdpnp.driver.MD PnP Cardiopulmonary Pump1338271892:service=driver] | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:52:35,635 | INFO  | Located managed bean 'timeManager': registering with JMX server as MBean [mdpnp.driver.MD PnP Cardiopulmonary Pump1338271892:service=timeManager] | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:52:35,636 | WARN  | Bean with key 'timeManager' has been registered as an MBean but has no exposed attributes or operations | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:52:35,638 | INFO  | Got ContextRefreshedEvent from MD PnP Cardiopulmonary Pump1338271892 | org.mdpnp.devices.LifecycleController | JavaFX Application Thread
+2018-06-14 11:52:35,648 | INFO  | Successfully called start on 1 beans | org.mdpnp.devices.LifecycleController | JavaFX Application Thread
+2018-06-14 11:52:35,864 | INFO  | RotatorControl Connected... | org.mdpnp.util.rotator.RotatorControl | JavaFX Application Thread
+2018-06-14 11:52:35,907 | INFO  | App Started | org.mdpnp.bloodpump.Main | JavaFX Application Thread
+2018-06-14 11:52:35,908 | INFO  | Rate Connected... | org.mdpnp.bloodpump.Dial | JavaFX Application Thread
+2018-06-14 11:52:36,245 | INFO  | Connecting device to address: >192.168.56.1< | org.mdpnp.devices.DeviceDriverProvider$SpringLoadedDriver | Thread-19
+2018-06-14 11:52:36,250 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:52:36,409 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:52:36,908 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:52:37,408 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:52:37,908 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:52:38,388 | WARN  | Limit MDC_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,389 | WARN  | Limit MDC_TTHOR_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,389 | WARN  | Limit MDC_CO2_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,389 | WARN  | Limit MDC_VENT_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,390 | WARN  | Limit MDC_AWAY_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,390 | WARN  | Limit MDC_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,390 | WARN  | Limit MDC_TTHOR_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,390 | WARN  | Limit MDC_CO2_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,391 | WARN  | Limit MDC_VENT_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,391 | WARN  | Limit MDC_AWAY_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,391 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,391 | WARN  | Limit MDC_PULS_RATE_NON_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,392 | WARN  | Limit MDC_BLD_PULS_RATE_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,392 | WARN  | Limit MDC_ECG_CARD_BEAT_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,392 | WARN  | Limit MDC_ECG_HEART_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,392 | WARN  | Limit MDC_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,393 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,393 | WARN  | Limit MDC_PULS_RATE_NON_INV high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,393 | WARN  | Limit MDC_BLD_PULS_RATE_INV high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,394 | WARN  | Limit MDC_ECG_CARD_BEAT_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,394 | WARN  | Limit MDC_ECG_HEART_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,394 | WARN  | Limit MDC_PULS_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,395 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 low_limit limit changed to [ 85.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,395 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 high_limit limit changed to [ 100.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:52:38,408 | ERROR | WriterHistoryMemoryPlugin_addSample:instance not found | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:54:53,713 | INFO  | Loading user overrides configuration from C:\Users\bagshawd\git\CPM\MDPnPBloodPump\ice.system.properties | org.mdpnp.bloodpump.Start | main
+2018-06-14 11:54:53,886 | INFO  | Refreshing ICE_Device_Interface: startup date [Thu Jun 14 11:54:53 EDT 2018]; root of context hierarchy | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 11:54:53,917 | INFO  | Loading XML bean definitions from class path resource [DeviceAdapterContext.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 11:54:54,026 | INFO  | Loading XML bean definitions from class path resource [RtConfig.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 11:54:54,223 | INFO  | Loading ice_library.xml from file:/C:/Users/bagshawd/git/CPM/MDPnPBloodPump/bin/META-INF/ice_library.xml | org.mdpnp.rtiapi.qos.IceQos | JavaFX Application Thread
+2018-06-14 11:54:54,234 | INFO  | Loaded default ice_library QoS from classpath | org.mdpnp.rtiapi.qos.IceQos | JavaFX Application Thread
+2018-06-14 11:54:54,281 | WARN  | Discovery 'multicast_receive_addresses' size:1 first entry:udpv4://239.255.0.1 | org.mdpnp.devices.DomainParticipantFactory | JavaFX Application Thread
+2018-06-14 11:54:54,602 | INFO  | Refreshing MD PnP Cardiopulmonary Pump: startup date [Thu Jun 14 11:54:54 EDT 2018]; parent: ICE_Device_Interface | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 11:54:54,602 | INFO  | Loading XML bean definitions from URL [file:/C:/Users/bagshawd/git/CPM/MDPnPBloodPump/bin/DriverContext.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 11:54:54,742 | INFO  | Initializing ExecutorService  'taskExecutor' | org.springframework.scheduling.concurrent.ScheduledExecutorFactoryBean | JavaFX Application Thread
+2018-06-14 11:54:54,754 | INFO  | Using the TCPSerialProvider, be sure you provided a host:port target | org.mdpnp.devices.DeviceDriverProvider$SpringLoadedDriver | JavaFX Application Thread
+2018-06-14 11:54:54,929 | WARN  | Limit MDC_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,929 | WARN  | Limit MDC_TTHOR_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,930 | WARN  | Limit MDC_CO2_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,930 | WARN  | Limit MDC_VENT_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,930 | WARN  | Limit MDC_AWAY_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,931 | WARN  | Limit MDC_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,932 | WARN  | Limit MDC_TTHOR_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,932 | WARN  | Limit MDC_CO2_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,932 | WARN  | Limit MDC_VENT_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,932 | WARN  | Limit MDC_AWAY_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,933 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,933 | WARN  | Limit MDC_PULS_RATE_NON_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,933 | WARN  | Limit MDC_BLD_PULS_RATE_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,933 | WARN  | Limit MDC_ECG_CARD_BEAT_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,934 | WARN  | Limit MDC_ECG_HEART_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,934 | WARN  | Limit MDC_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,934 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,935 | WARN  | Limit MDC_PULS_RATE_NON_INV high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,936 | WARN  | Limit MDC_BLD_PULS_RATE_INV high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,936 | WARN  | Limit MDC_ECG_CARD_BEAT_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,936 | WARN  | Limit MDC_ECG_HEART_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,937 | WARN  | Limit MDC_PULS_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,937 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 low_limit limit changed to [ 85.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,937 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 high_limit limit changed to [ 100.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:54:54,941 | ERROR | DDS_Topic_createI:!create presentation topic | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:54:54,941 | WARN  | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceIdentity' defined in URL [file:/C:/Users/bagshawd/git/CPM/MDPnPBloodPump/bin/DriverContext.xml]: Cannot resolve reference to bean 'driver' while setting bean property 'targetObject'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'driver': FactoryBean threw exception on object creation; nested exception is com.rti.dds.infrastructure.RETCODE_ERROR: error creating entity | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 11:54:54,942 | INFO  | Shutting down ExecutorService 'taskExecutor' | org.springframework.scheduling.concurrent.ScheduledExecutorFactoryBean | JavaFX Application Thread
+2018-06-14 11:58:34,882 | INFO  | Loading user overrides configuration from C:\Users\bagshawd\git\CPM\MDPnPBloodPump\ice.system.properties | org.mdpnp.bloodpump.Start | main
+2018-06-14 11:58:35,059 | INFO  | Refreshing ICE_Device_Interface: startup date [Thu Jun 14 11:58:35 EDT 2018]; root of context hierarchy | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 11:58:35,089 | INFO  | Loading XML bean definitions from class path resource [DeviceAdapterContext.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 11:58:35,192 | INFO  | Loading XML bean definitions from class path resource [RtConfig.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 11:58:35,386 | INFO  | Loading ice_library.xml from file:/C:/Users/bagshawd/git/CPM/MDPnPBloodPump/bin/META-INF/ice_library.xml | org.mdpnp.rtiapi.qos.IceQos | JavaFX Application Thread
+2018-06-14 11:58:35,397 | INFO  | Loaded default ice_library QoS from classpath | org.mdpnp.rtiapi.qos.IceQos | JavaFX Application Thread
+2018-06-14 11:58:35,448 | WARN  | Discovery 'multicast_receive_addresses' size:1 first entry:udpv4://239.255.0.1 | org.mdpnp.devices.DomainParticipantFactory | JavaFX Application Thread
+2018-06-14 11:58:35,762 | INFO  | Refreshing MD PnP Cardiopulmonary Pump: startup date [Thu Jun 14 11:58:35 EDT 2018]; parent: ICE_Device_Interface | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 11:58:35,762 | INFO  | Loading XML bean definitions from URL [file:/C:/Users/bagshawd/git/CPM/MDPnPBloodPump/bin/DriverContext.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 11:58:35,891 | INFO  | Initializing ExecutorService  'taskExecutor' | org.springframework.scheduling.concurrent.ScheduledExecutorFactoryBean | JavaFX Application Thread
+2018-06-14 11:58:35,903 | INFO  | Using the TCPSerialProvider, be sure you provided a host:port target | org.mdpnp.devices.DeviceDriverProvider$SpringLoadedDriver | JavaFX Application Thread
+2018-06-14 11:58:36,082 | WARN  | Limit MDC_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,084 | WARN  | Limit MDC_TTHOR_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,084 | WARN  | Limit MDC_CO2_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,085 | WARN  | Limit MDC_VENT_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,088 | WARN  | Limit MDC_AWAY_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,089 | WARN  | Limit MDC_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,090 | WARN  | Limit MDC_TTHOR_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,091 | WARN  | Limit MDC_CO2_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,091 | WARN  | Limit MDC_VENT_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,091 | WARN  | Limit MDC_AWAY_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,093 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,094 | WARN  | Limit MDC_PULS_RATE_NON_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,094 | WARN  | Limit MDC_BLD_PULS_RATE_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,095 | WARN  | Limit MDC_ECG_CARD_BEAT_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,095 | WARN  | Limit MDC_ECG_HEART_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,095 | WARN  | Limit MDC_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,096 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,096 | WARN  | Limit MDC_PULS_RATE_NON_INV high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,096 | WARN  | Limit MDC_BLD_PULS_RATE_INV high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,097 | WARN  | Limit MDC_ECG_CARD_BEAT_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,097 | WARN  | Limit MDC_ECG_HEART_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,098 | WARN  | Limit MDC_PULS_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,098 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 low_limit limit changed to [ 85.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,098 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 high_limit limit changed to [ 100.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 11:58:36,215 | INFO  | Registering beans for JMX exposure on startup | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:58:36,224 | INFO  | Bean with name 'driver' has been autodetected for JMX exposure | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:58:36,247 | INFO  | Bean with name 'partition' has been autodetected for JMX exposure | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:58:36,248 | INFO  | Bean with name 'timeManager' has been autodetected for JMX exposure | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:58:36,250 | INFO  | Located managed bean 'partition': registering with JMX server as MBean [mdpnp.driver.MD PnP Cardiopulmonary Pump116780062:service=partition] | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:58:36,265 | INFO  | Located managed bean 'driver': registering with JMX server as MBean [mdpnp.driver.MD PnP Cardiopulmonary Pump116780062:service=driver] | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:58:36,275 | INFO  | Located managed bean 'timeManager': registering with JMX server as MBean [mdpnp.driver.MD PnP Cardiopulmonary Pump116780062:service=timeManager] | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:58:36,276 | WARN  | Bean with key 'timeManager' has been registered as an MBean but has no exposed attributes or operations | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:58:36,278 | INFO  | Got ContextRefreshedEvent from MD PnP Cardiopulmonary Pump116780062 | org.mdpnp.devices.LifecycleController | JavaFX Application Thread
+2018-06-14 11:58:36,289 | INFO  | Successfully called start on 1 beans | org.mdpnp.devices.LifecycleController | JavaFX Application Thread
+2018-06-14 11:58:36,490 | INFO  | RotatorControl Connected... | org.mdpnp.util.rotator.RotatorControl | JavaFX Application Thread
+2018-06-14 11:58:36,530 | INFO  | App Started | org.mdpnp.bloodpump.Main | JavaFX Application Thread
+2018-06-14 11:58:36,530 | INFO  | Rate Connected... | org.mdpnp.bloodpump.Dial | JavaFX Application Thread
+2018-06-14 11:58:36,843 | INFO  | Connecting device to address: >192.168.56.1< | org.mdpnp.devices.DeviceDriverProvider$SpringLoadedDriver | Thread-19
+2018-06-14 11:58:58,037 | INFO  | Shutting down | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 11:58:58,037 | INFO  | Shut down local user interface | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 11:58:58,041 | INFO  | 50% Ask the device to disconnect from the ICE | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 11:58:58,046 | INFO  | 75% Shutting down the device | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 11:58:58,046 | INFO  | Closing MD PnP Cardiopulmonary Pump: startup date [Thu Jun 14 11:58:35 EDT 2018]; parent: ICE_Device_Interface | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 11:58:58,047 | INFO  | Unregistering JMX-exposed beans on shutdown | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:58:58,047 | INFO  | Unregistering JMX-exposed beans | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 11:58:58,052 | INFO  | Shutdown in progress... | org.mdpnp.bloodpump.BloodPumpHandler | JavaFX Application Thread
+2018-06-14 11:58:58,057 | ERROR | [D0215|DELETE Topic|T=Numeric]DDS_Topic_destroyI:!delete PRESTopic | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:58:58,057 | ERROR | [D0215|DELETE Topic|T=Numeric]DDS_DomainParticipant_delete_topic:!delete topic | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:58:58,057 | WARN  | Invocation of destroy method 'shutdown' failed on bean with name 'driver': com.rti.dds.infrastructure.RETCODE_PRECONDITION_NOT_MET | org.springframework.beans.factory.support.DisposableBeanAdapter | JavaFX Application Thread
+2018-06-14 11:58:58,057 | INFO  | Shutting down ExecutorService 'taskExecutor' | org.springframework.scheduling.concurrent.ScheduledExecutorFactoryBean | JavaFX Application Thread
+2018-06-14 11:58:58,058 | INFO  | Shut down spring context | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 11:58:58,058 | INFO  | Closing ICE_Device_Interface: startup date [Thu Jun 14 11:58:35 EDT 2018]; root of context hierarchy | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 11:58:58,058 | INFO  | Handle parent context shutdown event | org.mdpnp.devices.DeviceDriverProvider$SpringLoadedDriver | JavaFX Application Thread
+2018-06-14 11:58:58,058 | ERROR | [D0215|DELETE Pub]PRESPsService_destroyGroupWithCursor:!no local endpoint in group | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:58:58,061 | ERROR | [D0215|DELETE Pub]PRESPsService_destroyGroup:!delete group | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:58:58,061 | ERROR | [D0215|DELETE Pub]DDS_Publisher_delete_presentation_publisher:!delete PRESGroup | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:58:58,061 | ERROR | [D0215|DELETE Pub]DDS_Publisher_destroyI:!delete PRESGroup | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:58:58,062 | ERROR | [D0215|DELETE Pub]DDS_DomainParticipant_delete_publisher:!delete publisher | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:58:58,062 | WARN  | Invocation of destroy method failed on bean with name 'publisher': com.rti.dds.infrastructure.RETCODE_PRECONDITION_NOT_MET | org.springframework.beans.factory.support.DisposableBeanAdapter | JavaFX Application Thread
+2018-06-14 11:58:58,064 | ERROR | [D0215|DELETE Pub]PRESPsService_destroyGroupWithCursor:!no local endpoint in group | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:58:58,064 | ERROR | [D0215|DELETE Pub]PRESPsService_destroyGroup:!delete group | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:58:58,064 | ERROR | [D0215|DELETE Pub]DDS_Publisher_delete_presentation_publisher:!delete PRESGroup | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:58:58,064 | ERROR | [D0215|DELETE Pub]DDS_Publisher_destroyI:!delete PRESGroup | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:58:58,064 | ERROR | [D0215|DELETE Pub]DDS_DomainParticipant_delete_publisher:!delete publisher | com.rti.dds | JavaFX Application Thread
+2018-06-14 11:58:58,064 | WARN  | Invocation of destroy method failed on bean with name 'domainParticipant': com.rti.dds.infrastructure.RETCODE_PRECONDITION_NOT_MET | org.springframework.beans.factory.support.DisposableBeanAdapter | JavaFX Application Thread
+2018-06-14 12:01:31,741 | INFO  | Loading user overrides configuration from C:\Users\bagshawd\git\CPM\MDPnPBloodPump\ice.system.properties | org.mdpnp.bloodpump.Start | main
+2018-06-14 12:01:31,919 | INFO  | Refreshing ICE_Device_Interface: startup date [Thu Jun 14 12:01:31 EDT 2018]; root of context hierarchy | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 12:01:31,950 | INFO  | Loading XML bean definitions from class path resource [DeviceAdapterContext.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 12:01:32,059 | INFO  | Loading XML bean definitions from class path resource [RtConfig.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 12:01:32,264 | INFO  | Loading ice_library.xml from file:/C:/Users/bagshawd/git/CPM/MDPnPBloodPump/bin/META-INF/ice_library.xml | org.mdpnp.rtiapi.qos.IceQos | JavaFX Application Thread
+2018-06-14 12:01:32,276 | INFO  | Loaded default ice_library QoS from classpath | org.mdpnp.rtiapi.qos.IceQos | JavaFX Application Thread
+2018-06-14 12:01:32,322 | WARN  | Discovery 'multicast_receive_addresses' size:1 first entry:udpv4://239.255.0.1 | org.mdpnp.devices.DomainParticipantFactory | JavaFX Application Thread
+2018-06-14 12:01:32,641 | INFO  | Refreshing MD PnP Cardiopulmonary Pump: startup date [Thu Jun 14 12:01:32 EDT 2018]; parent: ICE_Device_Interface | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 12:01:32,642 | INFO  | Loading XML bean definitions from URL [file:/C:/Users/bagshawd/git/CPM/MDPnPBloodPump/bin/DriverContext.xml] | org.springframework.beans.factory.xml.XmlBeanDefinitionReader | JavaFX Application Thread
+2018-06-14 12:01:32,779 | INFO  | Initializing ExecutorService  'taskExecutor' | org.springframework.scheduling.concurrent.ScheduledExecutorFactoryBean | JavaFX Application Thread
+2018-06-14 12:01:32,791 | INFO  | Using the TCPSerialProvider, be sure you provided a host:port target | org.mdpnp.devices.DeviceDriverProvider$SpringLoadedDriver | JavaFX Application Thread
+2018-06-14 12:01:32,972 | WARN  | Limit MDC_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,972 | WARN  | Limit MDC_TTHOR_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,973 | WARN  | Limit MDC_CO2_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,973 | WARN  | Limit MDC_VENT_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,974 | WARN  | Limit MDC_AWAY_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,974 | WARN  | Limit MDC_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,975 | WARN  | Limit MDC_TTHOR_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,975 | WARN  | Limit MDC_CO2_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,976 | WARN  | Limit MDC_VENT_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,976 | WARN  | Limit MDC_AWAY_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,976 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,980 | WARN  | Limit MDC_PULS_RATE_NON_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,997 | WARN  | Limit MDC_BLD_PULS_RATE_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,998 | WARN  | Limit MDC_ECG_CARD_BEAT_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,998 | WARN  | Limit MDC_ECG_HEART_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,998 | WARN  | Limit MDC_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,999 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,999 | WARN  | Limit MDC_PULS_RATE_NON_INV high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,999 | WARN  | Limit MDC_BLD_PULS_RATE_INV high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:32,999 | WARN  | Limit MDC_ECG_CARD_BEAT_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:33,000 | WARN  | Limit MDC_ECG_HEART_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:33,000 | WARN  | Limit MDC_PULS_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:33,000 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 low_limit limit changed to [ 85.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:33,001 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 high_limit limit changed to [ 100.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:33,133 | INFO  | Registering beans for JMX exposure on startup | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 12:01:33,142 | INFO  | Bean with name 'driver' has been autodetected for JMX exposure | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 12:01:33,168 | INFO  | Bean with name 'partition' has been autodetected for JMX exposure | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 12:01:33,169 | INFO  | Bean with name 'timeManager' has been autodetected for JMX exposure | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 12:01:33,171 | INFO  | Located managed bean 'partition': registering with JMX server as MBean [mdpnp.driver.MD PnP Cardiopulmonary Pump1338271892:service=partition] | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 12:01:33,188 | INFO  | Located managed bean 'driver': registering with JMX server as MBean [mdpnp.driver.MD PnP Cardiopulmonary Pump1338271892:service=driver] | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 12:01:33,197 | INFO  | Located managed bean 'timeManager': registering with JMX server as MBean [mdpnp.driver.MD PnP Cardiopulmonary Pump1338271892:service=timeManager] | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 12:01:33,198 | WARN  | Bean with key 'timeManager' has been registered as an MBean but has no exposed attributes or operations | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 12:01:33,199 | INFO  | Got ContextRefreshedEvent from MD PnP Cardiopulmonary Pump1338271892 | org.mdpnp.devices.LifecycleController | JavaFX Application Thread
+2018-06-14 12:01:33,211 | INFO  | Successfully called start on 1 beans | org.mdpnp.devices.LifecycleController | JavaFX Application Thread
+2018-06-14 12:01:33,423 | INFO  | RotatorControl Connected... | org.mdpnp.util.rotator.RotatorControl | JavaFX Application Thread
+2018-06-14 12:01:33,464 | INFO  | App Started | org.mdpnp.bloodpump.Main | JavaFX Application Thread
+2018-06-14 12:01:33,464 | INFO  | Rate Connected... | org.mdpnp.bloodpump.Dial | JavaFX Application Thread
+2018-06-14 12:01:33,783 | INFO  | Connecting device to address: >192.168.56.1< | org.mdpnp.devices.DeviceDriverProvider$SpringLoadedDriver | Thread-19
+2018-06-14 12:01:42,559 | WARN  | Unsetting handle InstanceHandle_t[29,36,108,-55,109,-3,-26,-108,14,74,61,-23,-125,54,11,-112] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[-66,60,-91,65,60,-18,-19,93,18,-66,82,122,-103,83,-115,100] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[13,99,-94,-94,-26,53,32,89,80,-65,84,-46,-25,-89,7,44] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[76,-125,-24,-48,121,-16,82,-43,-86,-110,0,106,-2,-112,54,-123] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[-14,67,22,-127,115,56,-51,39,-120,-106,117,43,-109,71,94,-75] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[-17,-83,77,65,71,38,28,-50,-108,-89,67,-81,113,0,-51,76] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[93,-16,-61,-109,44,65,31,1,-47,-69,-90,109,-49,75,-56,-47] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[125,127,21,-44,-61,-12,22,-93,-52,13,30,95,98,76,-38,100] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[-6,-49,51,107,108,16,19,2,-78,-78,43,-92,-35,-17,-34,19] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[23,118,125,29,28,112,25,79,48,54,7,112,-55,-61,101,103] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[62,-101,-114,-2,-41,125,99,-58,12,-24,-40,-41,-90,-107,107,-94] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[2,-42,51,71,-10,-9,-56,-85,-42,88,91,-12,-119,4,25,-120] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[-20,20,69,116,69,58,-33,33,-68,47,27,33,-89,47,87,51] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[-94,20,-35,116,-34,96,36,-107,-39,93,97,66,64,-5,22,114] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[27,-103,22,-7,-86,-55,57,100,73,19,81,-74,45,119,34,-123] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[34,120,0,-23,-100,4,-108,60,46,36,-6,73,107,84,16,68] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[28,110,108,-16,79,23,121,-125,-61,22,-117,91,16,-74,126,78] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[72,4,-83,-117,21,0,-51,22,-47,124,-24,-103,57,-30,-88,-99] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[-45,28,0,-89,43,34,2,62,-73,42,-63,11,-104,-35,104,119] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[124,-108,-50,44,94,69,121,-82,114,4,126,-108,-54,4,15,1] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[-102,20,72,-47,-123,75,-43,-73,115,-72,-59,-71,10,-44,-113,115] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[-64,-126,124,-55,-127,83,-38,-9,-69,19,-26,-61,116,-20,-62,126] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[101,48,34,62,-8,84,29,106,-21,-72,20,-58,-25,-41,72,41] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:42,560 | WARN  | Unsetting handle InstanceHandle_t[-83,15,113,86,13,-17,-64,-121,25,43,21,54,48,-47,-6,109] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,800 | WARN  | Limit MDC_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,802 | WARN  | Limit MDC_TTHOR_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,802 | WARN  | Limit MDC_CO2_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,803 | WARN  | Limit MDC_VENT_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,803 | WARN  | Limit MDC_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,804 | WARN  | Limit MDC_TTHOR_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,804 | WARN  | Limit MDC_CO2_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,804 | WARN  | Limit MDC_VENT_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,804 | WARN  | Limit MDC_AWAY_RESP_RATE high_limit limit changed to [ 35.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,805 | WARN  | Limit MDC_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,805 | WARN  | Limit MDC_TTHOR_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,805 | WARN  | Limit MDC_CO2_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,805 | WARN  | Limit MDC_VENT_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,806 | WARN  | Limit MDC_AWAY_RESP_RATE low_limit limit changed to [ 4.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,942 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,943 | WARN  | Limit MDC_PULS_RATE_NON_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,943 | WARN  | Limit MDC_BLD_PULS_RATE_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,943 | WARN  | Limit MDC_ECG_CARD_BEAT_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,944 | WARN  | Limit MDC_ECG_HEART_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,944 | WARN  | Limit MDC_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,944 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE high_limit limit changed to [ Infinity  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,945 | WARN  | Limit MDC_PULS_RATE_NON_INV high_limit limit changed to [ Infinity  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,945 | WARN  | Limit MDC_BLD_PULS_RATE_INV high_limit limit changed to [ Infinity  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,964 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,964 | WARN  | Limit MDC_PULS_RATE_NON_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,965 | WARN  | Limit MDC_BLD_PULS_RATE_INV low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,965 | WARN  | Limit MDC_ECG_CARD_BEAT_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,965 | WARN  | Limit MDC_ECG_HEART_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,965 | WARN  | Limit MDC_PULS_RATE low_limit limit changed to [ 20.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,966 | WARN  | Limit MDC_PULS_OXIM_PULS_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,966 | WARN  | Limit MDC_PULS_RATE_NON_INV high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,966 | WARN  | Limit MDC_BLD_PULS_RATE_INV high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,966 | WARN  | Limit MDC_ECG_CARD_BEAT_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,967 | WARN  | Limit MDC_ECG_HEART_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:52,967 | WARN  | Limit MDC_PULS_RATE high_limit limit changed to [ 160.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:53,000 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 low_limit limit changed to [ 85.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:53,001 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 high_limit limit changed to [ Infinity  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:53,001 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 low_limit limit changed to [ 85.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:01:53,002 | WARN  | Limit MDC_PULS_OXIM_SAT_O2 high_limit limit changed to [ 100.0  ] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,816 | WARN  | Unsetting handle InstanceHandle_t[-17,-83,77,65,71,38,28,-50,-108,-89,67,-81,113,0,-51,76] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,816 | WARN  | Unsetting handle InstanceHandle_t[93,-16,-61,-109,44,65,31,1,-47,-69,-90,109,-49,75,-56,-47] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,816 | WARN  | Unsetting handle InstanceHandle_t[125,127,21,-44,-61,-12,22,-93,-52,13,30,95,98,76,-38,100] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,816 | WARN  | Unsetting handle InstanceHandle_t[-6,-49,51,107,108,16,19,2,-78,-78,43,-92,-35,-17,-34,19] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,816 | WARN  | Unsetting handle InstanceHandle_t[23,118,125,29,28,112,25,79,48,54,7,112,-55,-61,101,103] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,816 | WARN  | Unsetting handle InstanceHandle_t[29,36,108,-55,109,-3,-26,-108,14,74,61,-23,-125,54,11,-112] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,816 | WARN  | Unsetting handle InstanceHandle_t[-66,60,-91,65,60,-18,-19,93,18,-66,82,122,-103,83,-115,100] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,816 | WARN  | Unsetting handle InstanceHandle_t[13,99,-94,-94,-26,53,32,89,80,-65,84,-46,-25,-89,7,44] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,816 | WARN  | Unsetting handle InstanceHandle_t[76,-125,-24,-48,121,-16,82,-43,-86,-110,0,106,-2,-112,54,-123] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,816 | WARN  | Unsetting handle InstanceHandle_t[-14,67,22,-127,115,56,-51,39,-120,-106,117,43,-109,71,94,-75] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,816 | WARN  | Unsetting handle InstanceHandle_t[62,-101,-114,-2,-41,125,99,-58,12,-24,-40,-41,-90,-107,107,-94] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,816 | WARN  | Unsetting handle InstanceHandle_t[2,-42,51,71,-10,-9,-56,-85,-42,88,91,-12,-119,4,25,-120] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,816 | WARN  | Unsetting handle InstanceHandle_t[-20,20,69,116,69,58,-33,33,-68,47,27,33,-89,47,87,51] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,816 | WARN  | Unsetting handle InstanceHandle_t[-94,20,-35,116,-34,96,36,-107,-39,93,97,66,64,-5,22,114] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,816 | WARN  | Unsetting handle InstanceHandle_t[27,-103,22,-7,-86,-55,57,100,73,19,81,-74,45,119,34,-123] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,816 | WARN  | Unsetting handle InstanceHandle_t[34,120,0,-23,-100,4,-108,60,46,36,-6,73,107,84,16,68] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,816 | WARN  | Unsetting handle InstanceHandle_t[28,110,108,-16,79,23,121,-125,-61,22,-117,91,16,-74,126,78] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,817 | WARN  | Unsetting handle InstanceHandle_t[72,4,-83,-117,21,0,-51,22,-47,124,-24,-103,57,-30,-88,-99] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,817 | WARN  | Unsetting handle InstanceHandle_t[-45,28,0,-89,43,34,2,62,-73,42,-63,11,-104,-35,104,119] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,817 | WARN  | Unsetting handle InstanceHandle_t[124,-108,-50,44,94,69,121,-82,114,4,126,-108,-54,4,15,1] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,817 | WARN  | Unsetting handle InstanceHandle_t[-102,20,72,-47,-123,75,-43,-73,115,-72,-59,-71,10,-44,-113,115] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,817 | WARN  | Unsetting handle InstanceHandle_t[-64,-126,124,-55,-127,83,-38,-9,-69,19,-26,-61,116,-20,-62,126] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,817 | WARN  | Unsetting handle InstanceHandle_t[101,48,34,62,-8,84,29,106,-21,-72,20,-58,-25,-41,72,41] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:04,817 | WARN  | Unsetting handle InstanceHandle_t[-83,15,113,86,13,-17,-64,-121,25,43,21,54,48,-47,-6,109] | org.mdpnp.devices.AbstractDevice | EventLoopHandler
+2018-06-14 12:02:05,912 | INFO  | Shutting down | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 12:02:05,912 | INFO  | Shut down local user interface | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 12:02:05,913 | INFO  | 50% Ask the device to disconnect from the ICE | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 12:02:05,914 | INFO  | 75% Shutting down the device | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 12:02:05,914 | INFO  | Closing MD PnP Cardiopulmonary Pump: startup date [Thu Jun 14 12:01:32 EDT 2018]; parent: ICE_Device_Interface | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 12:02:05,915 | INFO  | Unregistering JMX-exposed beans on shutdown | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 12:02:05,915 | INFO  | Unregistering JMX-exposed beans | org.springframework.jmx.export.MBeanExporter | JavaFX Application Thread
+2018-06-14 12:02:05,917 | INFO  | Shutdown in progress... | org.mdpnp.bloodpump.BloodPumpHandler | JavaFX Application Thread
+2018-06-14 12:02:05,919 | ERROR | [D0215|DELETE Topic|T=Numeric]DDS_Topic_destroyI:!delete PRESTopic | com.rti.dds | JavaFX Application Thread
+2018-06-14 12:02:05,919 | ERROR | [D0215|DELETE Topic|T=Numeric]DDS_DomainParticipant_delete_topic:!delete topic | com.rti.dds | JavaFX Application Thread
+2018-06-14 12:02:05,919 | WARN  | Invocation of destroy method 'shutdown' failed on bean with name 'driver': com.rti.dds.infrastructure.RETCODE_PRECONDITION_NOT_MET | org.springframework.beans.factory.support.DisposableBeanAdapter | JavaFX Application Thread
+2018-06-14 12:02:05,919 | INFO  | Shutting down ExecutorService 'taskExecutor' | org.springframework.scheduling.concurrent.ScheduledExecutorFactoryBean | JavaFX Application Thread
+2018-06-14 12:02:05,919 | INFO  | Shut down spring context | org.mdpnp.apps.testapp.DeviceAdapterCommand | JavaFX Application Thread
+2018-06-14 12:02:05,919 | INFO  | Closing ICE_Device_Interface: startup date [Thu Jun 14 12:01:31 EDT 2018]; root of context hierarchy | org.springframework.context.support.ClassPathXmlApplicationContext | JavaFX Application Thread
+2018-06-14 12:02:05,920 | INFO  | Handle parent context shutdown event | org.mdpnp.devices.DeviceDriverProvider$SpringLoadedDriver | JavaFX Application Thread
+2018-06-14 12:02:05,920 | ERROR | [D0215|DELETE Pub]PRESPsService_destroyGroupWithCursor:!no local endpoint in group | com.rti.dds | JavaFX Application Thread
+2018-06-14 12:02:05,920 | ERROR | [D0215|DELETE Pub]PRESPsService_destroyGroup:!delete group | com.rti.dds | JavaFX Application Thread
+2018-06-14 12:02:05,920 | ERROR | [D0215|DELETE Pub]DDS_Publisher_delete_presentation_publisher:!delete PRESGroup | com.rti.dds | JavaFX Application Thread
+2018-06-14 12:02:05,920 | ERROR | [D0215|DELETE Pub]DDS_Publisher_destroyI:!delete PRESGroup | com.rti.dds | JavaFX Application Thread
+2018-06-14 12:02:05,920 | ERROR | [D0215|DELETE Pub]DDS_DomainParticipant_delete_publisher:!delete publisher | com.rti.dds | JavaFX Application Thread
+2018-06-14 12:02:05,920 | WARN  | Invocation of destroy method failed on bean with name 'publisher': com.rti.dds.infrastructure.RETCODE_PRECONDITION_NOT_MET | org.springframework.beans.factory.support.DisposableBeanAdapter | JavaFX Application Thread
+2018-06-14 12:02:05,921 | ERROR | [D0215|DELETE Pub]PRESPsService_destroyGroupWithCursor:!no local endpoint in group | com.rti.dds | JavaFX Application Thread
+2018-06-14 12:02:05,921 | ERROR | [D0215|DELETE Pub]PRESPsService_destroyGroup:!delete group | com.rti.dds | JavaFX Application Thread
+2018-06-14 12:02:05,921 | ERROR | [D0215|DELETE Pub]DDS_Publisher_delete_presentation_publisher:!delete PRESGroup | com.rti.dds | JavaFX Application Thread
+2018-06-14 12:02:05,921 | ERROR | [D0215|DELETE Pub]DDS_Publisher_destroyI:!delete PRESGroup | com.rti.dds | JavaFX Application Thread
+2018-06-14 12:02:05,921 | ERROR | [D0215|DELETE Pub]DDS_DomainParticipant_delete_publisher:!delete publisher | com.rti.dds | JavaFX Application Thread
+2018-06-14 12:02:05,921 | WARN  | Invocation of destroy method failed on bean with name 'domainParticipant': com.rti.dds.infrastructure.RETCODE_PRECONDITION_NOT_MET | org.springframework.beans.factory.support.DisposableBeanAdapter | JavaFX Application Thread
