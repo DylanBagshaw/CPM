@@ -85,7 +85,7 @@ public class DeviceAdapterCommand implements Configuration.HeadlessCommand, Conf
 		if (Platform.isFxApplicationThread() && config.isHeadless())
 			throw new IllegalStateException("Attempting to start headless app on the UI thread");
 
-		DeviceDriverProvider ddp = DeviceFactory.getDeviceDriverProvider("MD PnP CP Pump");
+		DeviceDriverProvider ddp = DeviceFactory.getDeviceDriverProvider("MD PnP Cardiopulmonary Pump");
 		if (null == ddp) {
 			log.error("Unknown device type was specified");
 			throw new Exception("Unknown device type was specified");
@@ -232,7 +232,7 @@ public class DeviceAdapterCommand implements Configuration.HeadlessCommand, Conf
 		private final HeadlessAdapter controller;
 
 		public GUIAdapter(DeviceDriverProvider deviceFactory, AbstractApplicationContext context) throws Exception {
-			controller = new HeadlessAdapter(DeviceFactory.getDeviceDriverProvider("MD PnP CP Pump"), context, false) { // TODO
+			controller = new HeadlessAdapter(DeviceFactory.getDeviceDriverProvider("MD PnP Cardiopulmonary Pump"), context, false) { // TODO
 			};
 		}
 

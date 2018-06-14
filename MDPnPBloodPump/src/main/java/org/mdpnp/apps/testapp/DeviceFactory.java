@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2017, MD PnP Program
+ * Copyright (c) 2018, MD PnP Program
  * All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
@@ -65,7 +65,7 @@ public class DeviceFactory {
 
 		@Override
 		public DeviceType getDeviceType() {
-			return new DeviceType(ice.ConnectionType.Network, "MD PnP", "CP Pump", "MD PnP CP Pump", 1);
+			return new DeviceType(ice.ConnectionType.Network, "MD PnP", "Cardiopulmonary Pump", "MD PnP Cardiopulmonary Pump", 1);
 		}
 
 		@Override

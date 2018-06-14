@@ -137,7 +137,7 @@ public class Start extends Application {
 		//
 
 		runConf = new Configuration(false, Configuration.Application.ICE_Device_Interface, domainId,
-				DeviceFactory.getDeviceDriverProvider("MD PnP CP Pump"), ip, "");
+				DeviceFactory.getDeviceDriverProvider("MD PnP Cardiopulmonary Pump"), ip, "");
 
 		Object o = runConf.getApplication().getAppClass().getConstructor().newInstance();
 
@@ -183,7 +183,7 @@ public class Start extends Application {
 			// scene.setCursor(Cursor.HAND);
 
 			// scene.getStylesheets().add(getClass().getResource("FxExperiencePlayer.css").toExternalForm());
-			primaryStage.setTitle("MDPnP CP Pump");
+			primaryStage.setTitle("MDPnP Cardiopulmonary Pump");
 			primaryStage.setScene(scene);
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -1,17 +1,19 @@
 package org.mdpnp.bloodpump;
 
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import org.mdpnp.util.rotator.RotatorControl;
 // import org.mdpnp.apps.testapp.DialogUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.rti.dds.infrastructure.InstanceHandle_t;
 
+import ice.BypassStatus;
+import ice.BypassStatusDataWriter;
 import ice.InfusionStatus;
 import ice.InfusionStatusDataWriter;
 import javafx.application.Platform;
@@ -40,11 +42,24 @@ public class Main {
 	@FXML
 	Label clock, pumpId;
 
+	// public static BypassStatus bypassStatus;
+	// public static InstanceHandle_t bypassStatusHandle;
+	// public static BypassStatusDataWriter bypassStatusWriter;
+
+	/***************************************************
+	 * comment out the code above in this function and uncomment the code below if
+	 * using OpenICE that does not have the CardioPulmonaryPump data.
+	 */
+
 	public static InfusionStatus infusionStatus;
 	public static InstanceHandle_t infusionStatusHandle;
 	public static InfusionStatusDataWriter infusionStatusWriter;
+
+	/**************************************************/
+
 	private static boolean stopThePump;
 	boolean active, paused;
+	public double seconds = 0;
 
 	public void initialize() {
 		log.info("App Started");
@@ -68,6 +83,8 @@ public class Main {
 				Platform.runLater(new Runnable() {
 					@Override
 					public void run() {
+						active = true;
+						seconds += 0.5;
 						SimpleDateFormat date = new SimpleDateFormat("kk:mm:ss a");
 						Date time = new Date();
 						date.format(time);
@@ -81,7 +98,7 @@ public class Main {
 						// DialogUtils.OkCancelDialog("! Interlock Stop !",
 						// "OpenICE Application has detected an adverse event and has "
 						// + "stopped the pump! Pump cannot be restarted until the interlock is "
-						// + "cleared." + " Check on the patient before continuing the infusion.");
+						// + "cleared." + " Check on the patient before continuing the bypass.");
 						// }
 						/**********************************/
 						pumpData();
@@ -92,6 +109,71 @@ public class Main {
 	}
 
 	public void pumpData() {
+		// BigDecimal round;
+		// // round = new BigDecimal(Dial.rate);
+		// // round = round.setScale(2, BigDecimal.ROUND_HALF_UP);
+		// try {
+		// Dial.rate = Dial.rate.setScale(2, BigDecimal.ROUND_HALF_UP);
+		// bypassStatus.bypass_flow_lmin = Dial.rate.doubleValue();
+		// } catch (NullPointerException npe) {
+		// bypassStatus.bypass_flow_lmin = 0;
+		// }
+		// try {
+		// bypassStatus.bypassActive = active;
+		// } catch (NullPointerException npe) {
+		// bypassStatus.bypassActive = false;
+		// }
+		//
+		// // 1g/ml 1000mcg/ml
+		// try {
+		// bypassStatus.bypass_speed_rpm = BloodParameters.generateRPM();
+		// } catch (NullPointerException npe) {
+		// bypassStatus.bypass_speed_rpm = 0;
+		// }
+		//
+		// // how many mls have gone through?
+		// try {
+		// bypassStatus.blood_temp_celsius = BloodParameters.generateBloodTemp();
+		// } catch (NullPointerException npe) {
+		// bypassStatus.blood_temp_celsius = 0;
+		// }
+		//
+		// // we'll do flow rate here...
+		// try {
+		// bypassStatus.blood_press_mmhg = 0;
+		// } catch (NullPointerException npe) {
+		// bypassStatus.blood_press_mmhg = 0;
+		// }
+		//
+		// // time passed
+		// try {
+		// round = new BigDecimal(Dial.volume);
+		// round = round.setScale(2, BigDecimal.ROUND_HALF_UP);
+		// bypassStatus.volume_bypassed_ml = round.doubleValue();
+		// } catch (NullPointerException npe) {
+		// bypassStatus.volume_bypassed_ml = 0;
+		// }
+		//
+		// // NA
+		// try {
+		// bypassStatus.bypass_duration_seconds = (int) seconds;
+		// } catch (NullPointerException npe) {
+		// bypassStatus.bypass_duration_seconds = 0;
+		// }
+		//
+		// if (bypassStatusWriter != null) {
+		// try {
+		// bypassStatusWriter.write(bypassStatus, bypassStatusHandle);
+		// } catch (NullPointerException npe) {
+		// log.error("Error writing the bypass status to OpenICE", npe);
+		// }
+		// }
+
+		/******************************************************************
+		 * comment out the code above in this function and uncomment the code below if
+		 * using OpenICE that does not have the CardioPulmonaryPump data.
+		 */
+
 		try {
 			infusionStatus.drug_name = "Blood";
 		} catch (NullPointerException npe) {
@@ -119,7 +201,8 @@ public class Main {
 
 		// we'll do flow rate here...
 		try {
-			infusionStatus.volume_to_be_infused_ml = (int) RotatorControl.rate;
+			Dial.rate = Dial.rate.setScale(2, BigDecimal.ROUND_HALF_UP);
+			infusionStatus.volume_to_be_infused_ml = Dial.rate.intValue();
 		} catch (NullPointerException npe) {
 			infusionStatus.volume_to_be_infused_ml = 0;
 		}
@@ -149,6 +232,9 @@ public class Main {
 				log.error("Error writing the infusion status to OpenICE", npe);
 			}
 		}
+
+		/*******************************************************/
+
 	}
 
 	public void setInterlockStop(boolean interLockStop) {
