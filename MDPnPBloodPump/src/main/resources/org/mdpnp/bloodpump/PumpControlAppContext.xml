@@ -14,7 +14,7 @@
     <bean id="fxDecorator" class="org.mdpnp.apps.testapp.FxmlLoaderFactory">
         <property name="screenDefinitions">
             <map>
-                <entry key="Remote.fxml"  value="uiController" />
+                <entry key="Main.fxml"  value="uiController" />
             </map>
         </property>
     </bean>

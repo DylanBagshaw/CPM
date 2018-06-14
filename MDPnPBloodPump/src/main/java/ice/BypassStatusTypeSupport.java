@@ -166,15 +166,15 @@ public class BypassStatusTypeSupport extends TypeSupportImpl {
             
         currentAlignment +=  CdrPrimitiveType.BOOLEAN.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
             
         currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
@@ -210,15 +210,15 @@ public class BypassStatusTypeSupport extends TypeSupportImpl {
             
         currentAlignment +=  CdrPrimitiveType.BOOLEAN.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
             
         currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
@@ -259,15 +259,15 @@ public class BypassStatusTypeSupport extends TypeSupportImpl {
             
         currentAlignment += CdrPrimitiveType.BOOLEAN.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment += CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
+        currentAlignment += CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment += CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
+        currentAlignment += CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment += CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
+        currentAlignment += CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment += CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
+        currentAlignment += CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment += CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
+        currentAlignment += CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
             
         currentAlignment += CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
@@ -423,15 +423,15 @@ BypassStatus typedDst = (BypassStatus) dst;
             
             typedDst.bypassActive = src.readBoolean();
             
-            typedDst.bypass_flow_lmin = src.readInt();
+            typedDst.bypass_flow_lmin = src.readDouble();
             
-            typedDst.bypass_speed_rpm = src.readInt();
+            typedDst.bypass_speed_rpm = src.readDouble();
             
-            typedDst.blood_temp_celsius = src.readInt();
+            typedDst.blood_temp_celsius = src.readDouble();
             
-            typedDst.blood_press_mmhg = src.readInt();
+            typedDst.blood_press_mmhg = src.readDouble();
             
-            typedDst.volume_bypassed_ml = src.readInt();
+            typedDst.volume_bypassed_ml = src.readDouble();
             
             typedDst.bypass_duration_seconds = src.readInt();
             
@@ -517,15 +517,15 @@ BypassStatus typedDst = (BypassStatus) dst;
             
             src.skipBoolean();
             
-            src.skipInt();
+            src.skipDouble();
             
-            src.skipInt();
+            src.skipDouble();
             
-            src.skipInt();
+            src.skipDouble();
             
-            src.skipInt();
+            src.skipDouble();
             
-            src.skipInt();
+            src.skipDouble();
             
             src.skipInt();
             
@@ -564,15 +564,15 @@ BypassStatus typedDst = (BypassStatus) sample;
             
             src.skipBoolean();
             
-            src.skipInt();
+            src.skipDouble();
             
-            src.skipInt();
+            src.skipDouble();
             
-            src.skipInt();
+            src.skipDouble();
             
-            src.skipInt();
+            src.skipDouble();
             
-            src.skipInt();
+            src.skipDouble();
             
             src.skipInt();
             

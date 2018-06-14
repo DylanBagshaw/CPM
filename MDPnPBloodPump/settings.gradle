@@ -16,3 +16,10 @@ include 'services:webservice'
 */
 
 rootProject.name = 'MDPnPBloodPump'
+
+if(null != System.getenv().get("OSPL_HOME") && null != System.getenv().get("SPLICE_TARGET")) {
+	include 'data-types:x73-idl-ospl-dds'
+} else {
+	println "NOTE: To build with OpenSplice compatibility please set the OSPL_HOME and SPLICE_TARGET environment variables."
+}
+
