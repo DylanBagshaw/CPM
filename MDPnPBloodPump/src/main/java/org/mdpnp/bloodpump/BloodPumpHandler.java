@@ -223,7 +223,7 @@ public class BloodPumpHandler extends AbstractSimulatedConnectedDevice {
 	public static ice.InfusionObjectiveDataReader infusionObjectiveReader;
 	public static QueryCondition infusionObjectiveQueryCondition;
 	public static Topic infusionStatusTopic, infusionObjectiveTopic;
-	
+
 	private static ice.NumericDataWriter numeric_Writer;
 
 	public static String id = "";
@@ -309,7 +309,7 @@ public class BloodPumpHandler extends AbstractSimulatedConnectedDevice {
 			}
 
 		});
-		
+
 		ice.NumericTypeSupport.register_type(getParticipant(), ice.NumericTypeSupport.get_type_name());
 		numeric_Writer = (ice.NumericDataWriter) getParticipant().create_datawriter_with_profile(numericTopic,
 				QosProfiles.ice_library, QosProfiles.numeric_data, null, StatusKind.STATUS_MASK_NONE);
@@ -342,7 +342,7 @@ public class BloodPumpHandler extends AbstractSimulatedConnectedDevice {
 
 		getParticipant().delete_topic(infusionStatusTopic);
 		infusionStatusTopic = null;
-		
+
 		numeric_Writer.unregister_instance(Main.flow_rate, Main.numeric_Handle);
 
 		super.shutdown();

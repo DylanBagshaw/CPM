@@ -43,18 +43,18 @@ public class Main {
 	@FXML
 	Label clock, pumpId;
 
-//	public static BypassStatus bypassStatus;
-//	public static InstanceHandle_t bypassStatusHandle;
-//	public static BypassStatusDataWriter bypassStatusWriter;
+	// public static BypassStatus bypassStatus;
+	// public static InstanceHandle_t bypassStatusHandle;
+	// public static BypassStatusDataWriter bypassStatusWriter;
 
 	/***************************************************
 	 * comment out the code above in this function and uncomment the code below if
 	 * using OpenICE that does not have the CardioPulmonaryPump data.
 	 */
 
-	 public static InfusionStatus infusionStatus;
-	 public static InstanceHandle_t infusionStatusHandle;
-	 public static InfusionStatusDataWriter infusionStatusWriter;
+	public static InfusionStatus infusionStatus;
+	public static InstanceHandle_t infusionStatusHandle;
+	public static InfusionStatusDataWriter infusionStatusWriter;
 
 	/**************************************************/
 
@@ -112,7 +112,7 @@ public class Main {
 					}
 				});
 			}
-		}, 0, 500);
+		}, 0, 1000);
 	}
 
 	public void pumpData() {
@@ -120,13 +120,18 @@ public class Main {
 		// round = new BigDecimal(Dial.rate);
 		// round = round.setScale(2, BigDecimal.ROUND_HALF_UP);
 
-		// bypass flow rate
+		// // bypass flow rate
 		// try {
 		// Dial.rate = Dial.rate.setScale(2, BigDecimal.ROUND_HALF_UP);
 		// bypassStatus.bypass_flow_lmin = Dial.rate.doubleValue();
 		// } catch (NullPointerException npe) {
 		// bypassStatus.bypass_flow_lmin = 0;
 		// }
+		//
+		// if (bypassStatus.bypass_flow_lmin < 0.1)
+		// active = false;
+		// else
+		// active = true;
 		//
 		// // bypass status
 		// try {
@@ -191,6 +196,11 @@ public class Main {
 		} catch (NullPointerException npe) {
 			infusionStatus.drug_name = "Not Selected";
 		}
+
+		if (infusionStatus.solution_volume_ml < 0.1)
+			active = false;
+		else
+			active = true;
 		try {
 			infusionStatus.infusionActive = active;
 		} catch (NullPointerException npe) {
@@ -204,7 +214,7 @@ public class Main {
 			infusionStatus.drug_mass_mcg = 0;
 		}
 
-		// how many mls have gone through?
+		// volume bypassed
 		try {
 			round = new BigDecimal(Dial.volume);
 			round = round.setScale(2, BigDecimal.ROUND_HALF_UP);
