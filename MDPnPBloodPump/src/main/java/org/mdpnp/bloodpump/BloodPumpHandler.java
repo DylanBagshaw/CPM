@@ -44,10 +44,10 @@ public class BloodPumpHandler extends AbstractSimulatedConnectedDevice {
 	public static ice.BypassObjectiveDataReader bypassObjectiveReader;
 	public static QueryCondition bypassObjectiveQueryCondition;
 	public static Topic bypassStatusTopic, bypassObjectiveTopic;
-	
-//	private static InstanceHandle_t numeric_Handle;
+
+	// private static InstanceHandle_t numeric_Handle;
 	private static ice.NumericDataWriter numeric_Writer;
-//	private static Topic numericTopic;
+	// private static Topic numericTopic;
 
 	public static String id = "";
 
@@ -132,12 +132,13 @@ public class BloodPumpHandler extends AbstractSimulatedConnectedDevice {
 
 		});
 		ice.NumericTypeSupport.register_type(getParticipant(), ice.NumericTypeSupport.get_type_name());
-//		numericTopic = getParticipant().create_topic(ice.NumericTopic.VALUE,
-//				ice.NumericTypeSupport.get_type_name(), DomainParticipant.TOPIC_QOS_DEFAULT, null,
-//				StatusKind.STATUS_MASK_NONE);
+		// numericTopic = getParticipant().create_topic(ice.NumericTopic.VALUE,
+		// ice.NumericTypeSupport.get_type_name(), DomainParticipant.TOPIC_QOS_DEFAULT,
+		// null,
+		// StatusKind.STATUS_MASK_NONE);
 		numeric_Writer = (ice.NumericDataWriter) getParticipant().create_datawriter_with_profile(numericTopic,
 				QosProfiles.ice_library, QosProfiles.numeric_data, null, StatusKind.STATUS_MASK_NONE);
-		
+
 		Main.bypassStatus = bypassStatus;
 		Main.bypassStatusHandle = bypassStatusHandle;
 		Main.bypassStatusWriter = bypassStatusWriter;
@@ -166,7 +167,7 @@ public class BloodPumpHandler extends AbstractSimulatedConnectedDevice {
 
 		getParticipant().delete_topic(bypassStatusTopic);
 		bypassStatusTopic = null;
-		
+
 		numeric_Writer.unregister_instance(Main.flow_rate, Main.numeric_Handle);
 
 		super.shutdown();

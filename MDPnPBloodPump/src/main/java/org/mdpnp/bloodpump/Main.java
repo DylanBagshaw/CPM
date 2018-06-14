@@ -252,7 +252,7 @@ public class Main {
 		flow_rate.instance_id = 0;
 		try {
 			Dial.rate = Dial.rate.setScale(2, BigDecimal.ROUND_HALF_UP);
-			flow_rate.value = Dial.rate.floatValue();
+			flow_rate.value = Dial.rate.intValue();
 		} catch (Exception e) {
 			flow_rate.value = 0;
 		}
