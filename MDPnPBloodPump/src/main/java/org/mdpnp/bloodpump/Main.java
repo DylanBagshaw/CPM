@@ -60,7 +60,7 @@ public class Main {
 
 	public static InstanceHandle_t numeric_Handle;
 	public static ice.NumericDataWriter numeric_Writer;
-	public static ice.Numeric flow_rate;
+	public static ice.Numeric flow_rate, pump_velocity, blood_temp, blood_press, vol_bypassed;
 
 	private static boolean stopThePump;
 	boolean active, paused;
@@ -262,10 +262,14 @@ public class Main {
 		long time = System.currentTimeMillis();
 		flow_rate = new ice.Numeric();
 		flow_rate.unique_device_identifier = BloodPumpHandler.id;
-		flow_rate.metric_id = rosetta.MDC_FLOW_BLD_PULM_CAP.VALUE;
-		flow_rate.vendor_metric_id = rosetta.MDC_FLOW_BLD_PULM_CAP.VALUE;
+		flow_rate.metric_id = rosetta.MDC_FLOW_FLUID_PUMP.VALUE;
+		flow_rate.vendor_metric_id = rosetta.MDC_FLOW_FLUID_PUMP.VALUE;
+
+		// this may not be the best metric
+		// flow_rate.metric_id = rosetta.MDC_FLOW_BLD_PULM_CAP.VALUE;
+		// flow_rate.vendor_metric_id = rosetta.MDC_FLOW_BLD_PULM_CAP.VALUE;
 		flow_rate.unit_id = rosetta.MDC_DIM_X_L_PER_MIN.VALUE;
-		flow_rate.instance_id = 0;
+		// flow_rate.instance_id = 0;
 		try {
 			// Dial.rate = Dial.rate.setScale(2, BigDecimal.ROUND_HALF_UP);
 			flow_rate.value = Dial.rate.intValue();
@@ -281,6 +285,106 @@ public class Main {
 		flow_rate.presentation_time.copy_from(flow_rate.device_time);
 		numeric_Writer.write(flow_rate, numeric_Handle);
 
+		// pressure of blood in pump
+		blood_press = new ice.Numeric();
+		blood_press.unique_device_identifier = BloodPumpHandler.id;
+		blood_press.metric_id = rosetta.MDC_PRESS_BLD_ART_MEAN.VALUE;
+		blood_press.vendor_metric_id = rosetta.MDC_PRESS_BLD_ART_MEAN.VALUE;
+		blood_press.unit_id = rosetta.MDC_DIM_MMHG.VALUE;
+		try {
+			blood_press.value = 0;
+		} catch (Exception e) {
+			blood_press.value = 0;
+		}
+		blood_press.device_time = new Time_t();
+		blood_press.presentation_time = new Time_t();
+
+		blood_press.instance_id = 1;
+		blood_press.device_time.sec = (int) (time / 1000L);
+		blood_press.device_time.nanosec = (int) (time % 1000L * 1000000L);
+		blood_press.presentation_time.copy_from(blood_press.device_time);
+		numeric_Writer.write(blood_press, numeric_Handle);
+
+		// time on bypass
+		// = new ice.Numeric();
+		// .unique_device_identifier = BloodPumpHandler.id;
+		// .metric_id = rosetta.
+		// .vendor_metric_id = rosetta.
+		// .unit_id = rosetta.MDC_DIM_SEC;
+		// .device_time = new Time_t();
+		// .presentation_time = new Time_t();
+		//
+		// .instance_id = 1;
+		// .device_time.sec = (int) (time / 1000L);
+		// .device_time.nanosec = (int) (time % 1000L * 1000000L);
+		// .presentation_time.copy_from(.device_time);
+
+		// volume bypassed
+		vol_bypassed = new ice.Numeric();
+		vol_bypassed.unique_device_identifier = BloodPumpHandler.id;
+		vol_bypassed.metric_id = rosetta.MDC_VOL_FLUID_DELIV.VALUE;
+		vol_bypassed.vendor_metric_id = rosetta.MDC_VOL_FLUID_DELIV.VALUE;
+		vol_bypassed.unit_id = rosetta.MDC_DIM_L.VALUE;
+		try {
+			round = new BigDecimal(Dial.volume);
+			round = round.setScale(2, BigDecimal.ROUND_HALF_UP);
+			vol_bypassed.value = round.floatValue();
+		} catch (Exception e) {
+			vol_bypassed.value = 0;
+		}
+		vol_bypassed.device_time = new Time_t();
+		vol_bypassed.presentation_time = new Time_t();
+
+		vol_bypassed.instance_id = 1;
+		vol_bypassed.device_time.sec = (int) (time / 1000L);
+		vol_bypassed.device_time.nanosec = (int) (time % 1000L * 1000000L);
+		vol_bypassed.presentation_time.copy_from(vol_bypassed.device_time);
+		numeric_Writer.write(vol_bypassed, numeric_Handle);
+
+		// blood temp
+		blood_temp = new ice.Numeric();
+		blood_temp.unique_device_identifier = BloodPumpHandler.id;
+		blood_temp.metric_id = rosetta.MDC_TEMP_BLD.VALUE;
+		blood_temp.vendor_metric_id = rosetta.MDC_TEMP_BLD.VALUE;
+		blood_temp.unit_id = rosetta.MDC_DIM_DEGC.VALUE;
+		try {
+
+			blood_temp.value = (float) BloodParameters.generateBloodTemp();
+		} catch (Exception e) {
+			blood_temp.value = 0;
+		}
+		blood_temp.device_time = new Time_t();
+		blood_temp.presentation_time = new Time_t();
+
+		blood_temp.instance_id = 1;
+		blood_temp.device_time.sec = (int) (time / 1000L);
+		blood_temp.device_time.nanosec = (int) (time % 1000L * 1000000L);
+		blood_temp.presentation_time.copy_from(blood_temp.device_time);
+		numeric_Writer.write(blood_temp, numeric_Handle);
+
+		// bypass pump velocity (rpm)
+		// not the correct way to use velocity index as it's defined as "Peak velocity
+		// of blood flow in the aorta" MDC_DIM_PER_KILO_SEC (*/1000s) however I will use
+		// it to describe the velocity of the bypass pump in rpms
+		pump_velocity = new ice.Numeric();
+		pump_velocity.unique_device_identifier = BloodPumpHandler.id;
+		pump_velocity.metric_id = rosetta.MDC_VELOCITY_INDEX.VALUE;
+		pump_velocity.vendor_metric_id = rosetta.MDC_VELOCITY_INDEX.VALUE;
+		pump_velocity.unit_id = rosetta.MDC_DIM_X_ROTATIONS_PER_MIN.VALUE;
+		try {
+			// Dial.rate = Dial.rate.setScale(2, BigDecimal.ROUND_HALF_UP);
+			pump_velocity.value = (float) BloodParameters.generateRPM();
+		} catch (Exception e) {
+			pump_velocity.value = 0;
+		}
+		pump_velocity.device_time = new Time_t();
+		pump_velocity.presentation_time = new Time_t();
+
+		pump_velocity.instance_id = 1;
+		pump_velocity.device_time.sec = (int) (time / 1000L);
+		pump_velocity.device_time.nanosec = (int) (time % 1000L * 1000000L);
+		pump_velocity.presentation_time.copy_from(pump_velocity.device_time);
+		numeric_Writer.write(pump_velocity, numeric_Handle);
 	}
 
 	public void setInterlockStop(boolean interLockStop) {
