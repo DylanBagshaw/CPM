@@ -43,9 +43,9 @@ public class Main {
 	@FXML
 	Label clock, pumpId;
 
-	// public static BypassStatus bypassStatus;
-	// public static InstanceHandle_t bypassStatusHandle;
-	// public static BypassStatusDataWriter bypassStatusWriter;
+	public static BypassStatus bypassStatus;
+	public static InstanceHandle_t bypassStatusHandle;
+	public static BypassStatusDataWriter bypassStatusWriter;
 
 	/***************************************************
 	 * comment out the code above in this function and uncomment the code below if
@@ -156,7 +156,7 @@ public class Main {
 		//
 		// // blood pressure
 		// try {
-		// bypassStatus.blood_press_mmhg = 0;
+		// bypassStatus.blood_press_mmhg = BloodParameters.generateBloodPressure();
 		// } catch (NullPointerException npe) {
 		// bypassStatus.blood_press_mmhg = 0;
 		// }
