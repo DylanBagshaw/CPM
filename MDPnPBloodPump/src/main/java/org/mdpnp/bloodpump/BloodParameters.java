@@ -3,11 +3,7 @@ package org.mdpnp.bloodpump;
 import java.math.BigDecimal;
 import java.util.Random;
 
-import org.mdpnp.devices.simulation.GlobalSimulationObjectiveListener;
-import org.mdpnp.devices.simulation.NumberWithGradient;
 import org.mdpnp.devices.simulation.NumberWithJitter;
-
-import ice.GlobalSimulationObjective;
 
 public class BloodParameters {
 	static Random random = new Random();
@@ -27,7 +23,6 @@ public class BloodParameters {
 
 	public static double generateBloodPressure() {
 		nextDraw();
-		// bp = new NumberWithJitter<Double>(90, 1, 80, 100);
 
 		BigDecimal round;
 		round = new BigDecimal(bp.doubleValue());
@@ -38,9 +33,6 @@ public class BloodParameters {
 
 	public static double generateBloodTemp() {
 		nextDraw();
-		// temp = new NumberWithJitter<Double>(30, 1, 28, 32);
-
-		// temp = random.nextInt((tempMax - tempMin) + 1) + tempMin;
 
 		BigDecimal round;
 		round = new BigDecimal(temp.doubleValue());
@@ -65,9 +57,6 @@ public class BloodParameters {
 
 	public static double generateRPM() {
 		nextDraw();
-		// rpm = new NumberWithJitter<Double>(1300, 100, 1200, 1500);
-
-		// rpm = random.nextInt((rpmMax - rpmMin) +1) + rpmMin;
 
 		BigDecimal round;
 		round = new BigDecimal(rpm.doubleValue());

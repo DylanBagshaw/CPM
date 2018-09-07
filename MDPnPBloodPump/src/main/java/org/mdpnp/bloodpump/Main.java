@@ -52,9 +52,9 @@ public class Main {
 	 * using OpenICE that does not have the CardioPulmonaryPump data.
 	 */
 
-	public static InfusionStatus infusionStatus;
-	public static InstanceHandle_t infusionStatusHandle;
-	public static InfusionStatusDataWriter infusionStatusWriter;
+	// public static InfusionStatus infusionStatus;
+	// public static InstanceHandle_t infusionStatusHandle;
+	// public static InfusionStatusDataWriter infusionStatusWriter;
 
 	/**************************************************/
 
@@ -120,142 +120,142 @@ public class Main {
 		// round = new BigDecimal(Dial.rate);
 		// round = round.setScale(2, BigDecimal.ROUND_HALF_UP);
 
-		// // bypass flow rate
-		// try {
-		// Dial.rate = Dial.rate.setScale(2, BigDecimal.ROUND_HALF_UP);
-		// bypassStatus.bypass_flow_lmin = Dial.rate.doubleValue();
-		// } catch (NullPointerException npe) {
-		// bypassStatus.bypass_flow_lmin = 0;
-		// }
-		//
-		// if (bypassStatus.bypass_flow_lmin < 0.1)
-		// active = false;
-		// else
-		// active = true;
-		//
-		// // bypass status
-		// try {
-		// bypassStatus.bypassActive = active;
-		// } catch (NullPointerException npe) {
-		// bypassStatus.bypassActive = false;
-		// }
-		//
-		// // bypass speed
-		// try {
-		// bypassStatus.bypass_speed_rpm = BloodParameters.generateRPM();
-		// } catch (NullPointerException npe) {
-		// bypassStatus.bypass_speed_rpm = 0;
-		// }
-		//
-		// // blood temp
-		// try {
-		// bypassStatus.blood_temp_celsius = BloodParameters.generateBloodTemp();
-		// } catch (NullPointerException npe) {
-		// bypassStatus.blood_temp_celsius = 0;
-		// }
-		//
-		// // blood pressure
-		// try {
-		// bypassStatus.blood_press_mmhg = BloodParameters.generateBloodPressure();
-		// } catch (NullPointerException npe) {
-		// bypassStatus.blood_press_mmhg = 0;
-		// }
-		//
-		// // volume bypassed
-		// try {
-		// round = new BigDecimal(Dial.volume);
-		// round = round.setScale(2, BigDecimal.ROUND_HALF_UP);
-		// bypassStatus.volume_bypassed_ml = round.doubleValue();
-		// } catch (NullPointerException npe) {
-		// bypassStatus.volume_bypassed_ml = 0;
-		// }
-		//
-		// // time on bypass
-		// try {
-		// bypassStatus.bypass_duration_seconds = (int) seconds;
-		// } catch (NullPointerException npe) {
-		// bypassStatus.bypass_duration_seconds = 0;
-		// }
-		//
-		// // write to supervisor
-		// if (bypassStatusWriter != null) {
-		// try {
-		// bypassStatusWriter.write(bypassStatus, bypassStatusHandle);
-		// } catch (NullPointerException npe) {
-		// log.error("Error writing the bypass status to OpenICE", npe);
-		// }
-		// }
-
-		/******************************************************************
-		 * comment out the code above in this function and uncomment the code below if
-		 * using OpenICE that does not have the CardioPulmonaryPump data.
-		 */
-
+		// bypass flow rate
 		try {
-			infusionStatus.drug_name = "Blood";
+			Dial.rate = Dial.rate.setScale(2, BigDecimal.ROUND_HALF_UP);
+			bypassStatus.bypass_flow_lmin = Dial.rate.doubleValue();
 		} catch (NullPointerException npe) {
-			infusionStatus.drug_name = "Not Selected";
+			bypassStatus.bypass_flow_lmin = 0;
 		}
 
-		if (infusionStatus.solution_volume_ml < 0.1)
+		if (bypassStatus.bypass_flow_lmin < 0.1)
 			active = false;
 		else
 			active = true;
+
+		// bypass status
 		try {
-			infusionStatus.infusionActive = active;
+			bypassStatus.bypassActive = active;
 		} catch (NullPointerException npe) {
-			infusionStatus.infusionActive = false;
+			bypassStatus.bypassActive = false;
 		}
 
-		// 1g/ml 1000mcg/ml
+		// bypass speed
 		try {
-			infusionStatus.drug_mass_mcg = 0;
+			bypassStatus.bypass_speed_rpm = BloodParameters.generateRPM();
 		} catch (NullPointerException npe) {
-			infusionStatus.drug_mass_mcg = 0;
+			bypassStatus.bypass_speed_rpm = 0;
+		}
+
+		// blood temp
+		try {
+			bypassStatus.blood_temp_celsius = BloodParameters.generateBloodTemp();
+		} catch (NullPointerException npe) {
+			bypassStatus.blood_temp_celsius = 0;
+		}
+
+		// blood pressure
+		try {
+			bypassStatus.blood_press_mmhg = BloodParameters.generateBloodPressure();
+		} catch (NullPointerException npe) {
+			bypassStatus.blood_press_mmhg = 0;
 		}
 
 		// volume bypassed
 		try {
 			round = new BigDecimal(Dial.volume);
 			round = round.setScale(2, BigDecimal.ROUND_HALF_UP);
-			infusionStatus.volume_to_be_infused_ml = round.intValue();
+			bypassStatus.volume_bypassed_ml = round.doubleValue();
 		} catch (NullPointerException npe) {
-			infusionStatus.volume_to_be_infused_ml = 0;
+			bypassStatus.volume_bypassed_ml = 0;
 		}
 
-		// we'll do flow rate here...
+		// time on bypass
 		try {
-			Dial.rate = Dial.rate.setScale(2, BigDecimal.ROUND_HALF_UP);
-			infusionStatus.solution_volume_ml = Dial.rate.intValue();
+			bypassStatus.bypass_duration_seconds = (int) seconds;
 		} catch (NullPointerException npe) {
-			infusionStatus.solution_volume_ml = 0;
+			bypassStatus.bypass_duration_seconds = 0;
 		}
 
-		// time passed
-		try {
-			infusionStatus.infusion_duration_seconds = (int) seconds;
-		} catch (NumberFormatException nfe) {
-			infusionStatus.infusion_duration_seconds = 0;
-		} catch (NullPointerException npe) {
-			infusionStatus.infusion_duration_seconds = 0;
-		}
-
-		// NA
-		try {
-			float percentComplete = 0;
-			percentComplete = 0;
-			infusionStatus.infusion_fraction_complete = percentComplete;
-		} catch (NullPointerException npe) {
-			infusionStatus.infusion_fraction_complete = 0;
-		}
-
-		if (infusionStatusWriter != null) {
+		// write to supervisor
+		if (bypassStatusWriter != null) {
 			try {
-				infusionStatusWriter.write(infusionStatus, infusionStatusHandle);
+				bypassStatusWriter.write(bypassStatus, bypassStatusHandle);
 			} catch (NullPointerException npe) {
-				log.error("Error writing the infusion status to OpenICE", npe);
+				log.error("Error writing the bypass status to OpenICE", npe);
 			}
 		}
+
+		/******************************************************************
+		 * comment out the code above in this function and uncomment the code below if
+		 * using OpenICE that does not have the CardioPulmonaryPump data.
+		 */
+
+		// try {
+		// infusionStatus.drug_name = "Blood";
+		// } catch (NullPointerException npe) {
+		// infusionStatus.drug_name = "Not Selected";
+		// }
+		//
+		// if (infusionStatus.solution_volume_ml < 0.1)
+		// active = false;
+		// else
+		// active = true;
+		// try {
+		// infusionStatus.infusionActive = active;
+		// } catch (NullPointerException npe) {
+		// infusionStatus.infusionActive = false;
+		// }
+		//
+		// // 1g/ml 1000mcg/ml
+		// try {
+		// infusionStatus.drug_mass_mcg = 0;
+		// } catch (NullPointerException npe) {
+		// infusionStatus.drug_mass_mcg = 0;
+		// }
+		//
+		// // volume bypassed
+		// try {
+		// round = new BigDecimal(Dial.volume);
+		// round = round.setScale(2, BigDecimal.ROUND_HALF_UP);
+		// infusionStatus.volume_to_be_infused_ml = round.intValue();
+		// } catch (NullPointerException npe) {
+		// infusionStatus.volume_to_be_infused_ml = 0;
+		// }
+		//
+		// // we'll do flow rate here...
+		// try {
+		// Dial.rate = Dial.rate.setScale(2, BigDecimal.ROUND_HALF_UP);
+		// infusionStatus.solution_volume_ml = Dial.rate.intValue();
+		// } catch (NullPointerException npe) {
+		// infusionStatus.solution_volume_ml = 0;
+		// }
+		//
+		// // time passed
+		// try {
+		// infusionStatus.infusion_duration_seconds = (int) seconds;
+		// } catch (NumberFormatException nfe) {
+		// infusionStatus.infusion_duration_seconds = 0;
+		// } catch (NullPointerException npe) {
+		// infusionStatus.infusion_duration_seconds = 0;
+		// }
+		//
+		// // NA
+		// try {
+		// float percentComplete = 0;
+		// percentComplete = 0;
+		// infusionStatus.infusion_fraction_complete = percentComplete;
+		// } catch (NullPointerException npe) {
+		// infusionStatus.infusion_fraction_complete = 0;
+		// }
+		//
+		// if (infusionStatusWriter != null) {
+		// try {
+		// infusionStatusWriter.write(infusionStatus, infusionStatusHandle);
+		// } catch (NullPointerException npe) {
+		// log.error("Error writing the infusion status to OpenICE", npe);
+		// }
+		// }
 
 		/*******************************************************/
 
