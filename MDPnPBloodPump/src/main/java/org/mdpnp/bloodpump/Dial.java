@@ -57,10 +57,13 @@ public class Dial {
 
 		rateLabel.setText("0.00");
 		bloodTemp.setText("0");
+		tempUnit.setText(DEGREE + "C");
 		rpm.setText("0.00");
-		pressure.setText("unknown");
-//		o2.setText("O" + SUBSCRIPT_TWO + ":\t\t\t" + 100.0 + " mmHg");
-//		co2.setText("CO" + SUBSCRIPT_TWO + ":\t\t\t" + 100.0 + " mEq/L");
+		rpmUnit.setText("rpms");
+		pressure.setText("0.0");
+		pressureUnit.setText("mmHg");
+		// o2.setText("O" + SUBSCRIPT_TWO + ":\t\t\t" + 100.0 + " mmHg");
+		// co2.setText("CO" + SUBSCRIPT_TWO + ":\t\t\t" + 100.0 + " mEq/L");
 		setTemp();
 		measureVolume();
 	}
@@ -115,37 +118,37 @@ public class Dial {
 	}
 
 	private void setTemp() {
-		// creates a clock and updates it every 5 seconds
+		// creates a clock and updates it every second
 		Timer timer = new Timer();
 		timer.scheduleAtFixedRate(new TimerTask() {
-			// int count = 0;
 
 			@Override
 			public void run() {
 				Platform.runLater(new Runnable() {
 					@Override
 					public void run() {
-						// count++;
 
-						// temp = (int) BloodTemp.generateBloodTemp();
-						bloodTemp.setText(String.valueOf(BloodParameters.generateBloodTemp()));
-						tempUnit.setText(DEGREE + "C");
-						
-						rpm.setText(String.valueOf(BloodParameters.generateRPM()));
-						rpmUnit.setText("rpms");
-						
-						pressureUnit.setText("mmHg");
-//						o2.setText("O" + SUBSCRIPT_TWO + ":\t\t\t" + BloodParameters.generateO2() + " mmHg");
-//						co2.setText("CO" + SUBSCRIPT_TWO + ":\t\t\t" + BloodParameters.generateCO2() + " mEq/L");
-						// if (count == 12) {
-						// count = 0;
-						// System.out.println("Flow after 1 minute:");
-						// System.out.println(volume);
-						// }
+						if (!rateLabel.getText().equals("0.00")) {
+							bloodTemp.setText(String.valueOf(BloodParameters.generateBloodTemp()));
+							
+							rpm.setText(String.valueOf(BloodParameters.generateRPM()));
+
+							pressure.setText(String.valueOf(BloodParameters.generateBloodPressure()));
+							
+							// o2.setText("O" + SUBSCRIPT_TWO + ":\t\t\t" + BloodParameters.generateO2() + "
+							// mmHg");
+							// co2.setText("CO" + SUBSCRIPT_TWO + ":\t\t\t" + BloodParameters.generateCO2()
+							// + " mEq/L");
+						} else {
+							rateLabel.setText("0.00");
+							bloodTemp.setText("0");
+							rpm.setText("0.00");
+							pressure.setText("0.0");
+						}
 					}
 				});
 			}
-		}, 0, 5000);
+		}, 0, 1000);
 	}
 
 	@SuppressWarnings("unused")
