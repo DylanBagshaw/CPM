@@ -14,8 +14,6 @@ import com.rti.dds.infrastructure.InstanceHandle_t;
 
 import ice.BypassStatus;
 import ice.BypassStatusDataWriter;
-import ice.InfusionStatus;
-import ice.InfusionStatusDataWriter;
 import ice.Time_t;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -25,20 +23,11 @@ import javafx.scene.control.Label;
 public class Main {
 	private static final Logger log = LoggerFactory.getLogger(Main.class);
 
-	// @FXML
-	// StackPane stackPane = new StackPane();
-
 	@FXML
 	Parent dial;
 
 	@FXML
 	Dial dialController;
-
-	// @FXML
-	// Parent rotatorControl;
-	//
-	// @FXML
-	// RotatorControl rotatorController;
 
 	@FXML
 	Label clock, pumpId;
@@ -47,21 +36,12 @@ public class Main {
 	public static InstanceHandle_t bypassStatusHandle;
 	public static BypassStatusDataWriter bypassStatusWriter;
 
-	/***************************************************
-	 * comment out the code above in this function and uncomment the code below if
-	 * using OpenICE that does not have the CardioPulmonaryPump data.
-	 */
-
-	// public static InfusionStatus infusionStatus;
-	// public static InstanceHandle_t infusionStatusHandle;
-	// public static InfusionStatusDataWriter infusionStatusWriter;
-
-	/**************************************************/
-
 	public static InstanceHandle_t numeric_Handle;
 	public static ice.NumericDataWriter numeric_Writer;
 	public static ice.Numeric flow_rate, pump_velocity, blood_temp, blood_press, vol_bypassed;
 
+	private String UDI;
+	
 	private static boolean stopThePump;
 	boolean active, paused;
 	public double seconds = 0;
@@ -71,11 +51,11 @@ public class Main {
 		setClock();
 
 		dialController.init(this);
-		// rotatorController.init(this);
 
 		numeric_Handle = numeric_Writer.register_instance(flow_rate);
 
 		String id = BloodPumpHandler.id;
+		UDI = id;
 		int idLength = id.length();
 		id = id.substring(idLength - 7);
 		pumpId.setText("UID: " + id);
@@ -90,8 +70,9 @@ public class Main {
 				Platform.runLater(new Runnable() {
 					@Override
 					public void run() {
-						active = true;
-						seconds += 0.5;
+						// active = true;
+						if (active)
+							seconds += 1;
 						SimpleDateFormat date = new SimpleDateFormat("kk:mm:ss a");
 						Date time = new Date();
 						date.format(time);
@@ -142,21 +123,24 @@ public class Main {
 
 		// bypass speed
 		try {
-			bypassStatus.bypass_speed_rpm = BloodParameters.generateRPM();
+			if (bypassStatus.bypass_flow_lmin != 0)
+				bypassStatus.bypass_speed_rpm = Dial.rpmNumeric;
 		} catch (NullPointerException npe) {
 			bypassStatus.bypass_speed_rpm = 0;
 		}
 
 		// blood temp
 		try {
-			bypassStatus.blood_temp_celsius = BloodParameters.generateBloodTemp();
+			if (bypassStatus.bypass_flow_lmin != 0)
+				bypassStatus.blood_temp_celsius = Dial.bloodTempNumeric;
 		} catch (NullPointerException npe) {
 			bypassStatus.blood_temp_celsius = 0;
 		}
 
 		// blood pressure
 		try {
-			bypassStatus.blood_press_mmhg = BloodParameters.generateBloodPressure();
+			if (bypassStatus.bypass_flow_lmin != 0)
+				bypassStatus.blood_press_mmhg = Dial.pressureNumeric;
 		} catch (NullPointerException npe) {
 			bypassStatus.blood_press_mmhg = 0;
 		}
@@ -165,14 +149,16 @@ public class Main {
 		try {
 			round = new BigDecimal(Dial.volume);
 			round = round.setScale(2, BigDecimal.ROUND_HALF_UP);
-			bypassStatus.volume_bypassed_ml = round.doubleValue();
+			if (bypassStatus.bypass_flow_lmin != 0)
+				bypassStatus.volume_bypassed_ml = round.doubleValue();
 		} catch (NullPointerException npe) {
 			bypassStatus.volume_bypassed_ml = 0;
 		}
 
 		// time on bypass
 		try {
-			bypassStatus.bypass_duration_seconds = (int) seconds;
+			if (bypassStatus.bypass_flow_lmin != 0)
+				bypassStatus.bypass_duration_seconds = (int) seconds;
 		} catch (NullPointerException npe) {
 			bypassStatus.bypass_duration_seconds = 0;
 		}
@@ -185,79 +171,6 @@ public class Main {
 				log.error("Error writing the bypass status to OpenICE", npe);
 			}
 		}
-
-		/******************************************************************
-		 * comment out the code above in this function and uncomment the code below if
-		 * using OpenICE that does not have the CardioPulmonaryPump data.
-		 */
-
-		// try {
-		// infusionStatus.drug_name = "Blood";
-		// } catch (NullPointerException npe) {
-		// infusionStatus.drug_name = "Not Selected";
-		// }
-		//
-		// if (infusionStatus.solution_volume_ml < 0.1)
-		// active = false;
-		// else
-		// active = true;
-		// try {
-		// infusionStatus.infusionActive = active;
-		// } catch (NullPointerException npe) {
-		// infusionStatus.infusionActive = false;
-		// }
-		//
-		// // 1g/ml 1000mcg/ml
-		// try {
-		// infusionStatus.drug_mass_mcg = 0;
-		// } catch (NullPointerException npe) {
-		// infusionStatus.drug_mass_mcg = 0;
-		// }
-		//
-		// // volume bypassed
-		// try {
-		// round = new BigDecimal(Dial.volume);
-		// round = round.setScale(2, BigDecimal.ROUND_HALF_UP);
-		// infusionStatus.volume_to_be_infused_ml = round.intValue();
-		// } catch (NullPointerException npe) {
-		// infusionStatus.volume_to_be_infused_ml = 0;
-		// }
-		//
-		// // we'll do flow rate here...
-		// try {
-		// Dial.rate = Dial.rate.setScale(2, BigDecimal.ROUND_HALF_UP);
-		// infusionStatus.solution_volume_ml = Dial.rate.intValue();
-		// } catch (NullPointerException npe) {
-		// infusionStatus.solution_volume_ml = 0;
-		// }
-		//
-		// // time passed
-		// try {
-		// infusionStatus.infusion_duration_seconds = (int) seconds;
-		// } catch (NumberFormatException nfe) {
-		// infusionStatus.infusion_duration_seconds = 0;
-		// } catch (NullPointerException npe) {
-		// infusionStatus.infusion_duration_seconds = 0;
-		// }
-		//
-		// // NA
-		// try {
-		// float percentComplete = 0;
-		// percentComplete = 0;
-		// infusionStatus.infusion_fraction_complete = percentComplete;
-		// } catch (NullPointerException npe) {
-		// infusionStatus.infusion_fraction_complete = 0;
-		// }
-		//
-		// if (infusionStatusWriter != null) {
-		// try {
-		// infusionStatusWriter.write(infusionStatus, infusionStatusHandle);
-		// } catch (NullPointerException npe) {
-		// log.error("Error writing the infusion status to OpenICE", npe);
-		// }
-		// }
-
-		/*******************************************************/
 
 		long time = System.currentTimeMillis();
 		flow_rate = new ice.Numeric();
@@ -292,7 +205,7 @@ public class Main {
 		blood_press.vendor_metric_id = rosetta.MDC_PRESS_BLD_ART_MEAN.VALUE;
 		blood_press.unit_id = rosetta.MDC_DIM_MMHG.VALUE;
 		try {
-			blood_press.value = 0;
+			blood_press.value = (float) Dial.pressureNumeric;
 		} catch (Exception e) {
 			blood_press.value = 0;
 		}
@@ -307,7 +220,7 @@ public class Main {
 
 		// time on bypass
 		// = new ice.Numeric();
-		// .unique_device_identifier = BloodPumpHandler.id;
+		// .unique_device_identifier = UID;
 		// .metric_id = rosetta.
 		// .vendor_metric_id = rosetta.
 		// .unit_id = rosetta.MDC_DIM_SEC;
@@ -321,7 +234,7 @@ public class Main {
 
 		// volume bypassed
 		vol_bypassed = new ice.Numeric();
-		vol_bypassed.unique_device_identifier = BloodPumpHandler.id;
+		vol_bypassed.unique_device_identifier = UDI;
 		vol_bypassed.metric_id = rosetta.MDC_VOL_FLUID_DELIV.VALUE;
 		vol_bypassed.vendor_metric_id = rosetta.MDC_VOL_FLUID_DELIV.VALUE;
 		vol_bypassed.unit_id = rosetta.MDC_DIM_L.VALUE;
@@ -343,13 +256,13 @@ public class Main {
 
 		// blood temp
 		blood_temp = new ice.Numeric();
-		blood_temp.unique_device_identifier = BloodPumpHandler.id;
+		blood_temp.unique_device_identifier = UDI;
 		blood_temp.metric_id = rosetta.MDC_TEMP_BLD.VALUE;
 		blood_temp.vendor_metric_id = rosetta.MDC_TEMP_BLD.VALUE;
 		blood_temp.unit_id = rosetta.MDC_DIM_DEGC.VALUE;
 		try {
 
-			blood_temp.value = (float) BloodParameters.generateBloodTemp();
+			blood_temp.value = (float) Dial.bloodTempNumeric;
 		} catch (Exception e) {
 			blood_temp.value = 0;
 		}
@@ -367,13 +280,13 @@ public class Main {
 		// of blood flow in the aorta" MDC_DIM_PER_KILO_SEC (*/1000s) however I will use
 		// it to describe the velocity of the bypass pump in rpms
 		pump_velocity = new ice.Numeric();
-		pump_velocity.unique_device_identifier = BloodPumpHandler.id;
+		pump_velocity.unique_device_identifier = UDI;
 		pump_velocity.metric_id = rosetta.MDC_VELOCITY_INDEX.VALUE;
 		pump_velocity.vendor_metric_id = rosetta.MDC_VELOCITY_INDEX.VALUE;
 		pump_velocity.unit_id = rosetta.MDC_DIM_X_ROTATIONS_PER_MIN.VALUE;
 		try {
 			// Dial.rate = Dial.rate.setScale(2, BigDecimal.ROUND_HALF_UP);
-			pump_velocity.value = (float) BloodParameters.generateRPM();
+			pump_velocity.value = (float) Dial.rpmNumeric;
 		} catch (Exception e) {
 			pump_velocity.value = 0;
 		}

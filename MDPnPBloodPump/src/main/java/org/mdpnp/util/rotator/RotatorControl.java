@@ -54,12 +54,6 @@ public class RotatorControl extends GridPane {
 
 	private static final Logger log = LoggerFactory.getLogger(RotatorControl.class);
 
-	// @FXML
-	// Parent main;
-	//
-	// @FXML
-	// Main mainController;
-
 	@FXML
 	private Button rotator_dial;
 	@FXML
@@ -68,11 +62,6 @@ public class RotatorControl extends GridPane {
 	private final int roundingFactor = 100; // 2 decimals rounding
 
 	private final DoubleProperty rotation = new SimpleDoubleProperty();
-
-	// public void init(Main main) {
-	// mainController = main;
-	// log.info("RotatorControl Connected...");
-	// }
 
 	public RotatorControl(String text) {
 		initialize(text);

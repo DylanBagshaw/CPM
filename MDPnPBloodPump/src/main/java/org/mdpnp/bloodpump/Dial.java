@@ -29,11 +29,6 @@ public class Dial {
 
 	@FXML
 	BorderPane borderpane;
-	// @FXML
-	// Pane knob;
-
-	// @FXML
-	// Slider volumeKnob = new Slider(0, 10, 0);
 
 	RotatorControl rotator = new RotatorControl("Rotate");
 
@@ -42,6 +37,7 @@ public class Dial {
 	int temp;
 	static BigDecimal rate;
 	static double volume = 0;
+	static double rpmNumeric, bloodTempNumeric, pressureNumeric;
 
 	// 1 PaCO2
 	// 2 PaO2
@@ -129,11 +125,14 @@ public class Dial {
 					public void run() {
 
 						if (!rateLabel.getText().equals("0.00")) {
-							bloodTemp.setText(String.valueOf(BloodParameters.generateBloodTemp()));
+							bloodTempNumeric = BloodParameters.generateBloodTemp();
+							bloodTemp.setText(String.valueOf(bloodTempNumeric));
 							
-							rpm.setText(String.valueOf(BloodParameters.generateRPM()));
-
-							pressure.setText(String.valueOf(BloodParameters.generateBloodPressure()));
+							rpmNumeric = BloodParameters.generateRPM();
+							rpm.setText(String.valueOf(rpmNumeric));
+							
+							pressureNumeric = BloodParameters.generateBloodPressure();
+							pressure.setText(String.valueOf(pressureNumeric));
 							
 							// o2.setText("O" + SUBSCRIPT_TWO + ":\t\t\t" + BloodParameters.generateO2() + "
 							// mmHg");
